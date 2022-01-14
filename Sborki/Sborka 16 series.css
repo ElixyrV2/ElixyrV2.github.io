@@ -15,7 +15,7 @@
 
 .main-menu > li > a {
     color: #000; /* Цвет текста */
-    position: fixed; /* Cдвигает элемент относительно его обычного положения */
+    position: relative; /* Cдвигает элемент относительно его обычного положения */
     padding: 0 0 20px 0; /* Внутренние оступы, сделал отсуп снизу, что бы линия была под блоком */
     text-transform: uppercase;  /* Капс в li менюшках */
     font-size: 15px; /* Размер, итак понятно :> */
@@ -45,7 +45,7 @@
     width: 100%; /* Делаем появление полоски видимым именно при наведении */
 }
 
-.main-menu > li.active a:after {
+.main-menu > li#sborki a:after {
     width: 100%; /* После активации блока линия класса active будет гореть */
 }
 
@@ -144,157 +144,7 @@
     top: 30px;
 }
 
-.main-menu {
-    list-style: none;
-    font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
-    margin: 0; /*отсуп со всех сторон */
-    margin-top: 30px; /* Доп. отсуп сверху */
-}
-
-.main-menu > li {
-    display: inline-flex; /* Все блоки li менюшки в одной строке  */
-}
-
-.main-menu > li + li {
-    margin-left: 20px; /* Пространство между блоками li меню */
-}
-
-.main-menu > li > a {
-    color: #000; /* Цвет текста */
-    position: relative; /* Cдвигает элемент относительно его обычного положения */
-    padding: 0 0 20px 0; /* Внутренние оступы, сделал отсуп снизу, что бы линия была под блоком */
-    text-transform: uppercase;  /* Капс в li менюшках */
-    font-size: 15px; /* Размер, итак понятно :> */
-    font-weight: bold; /* Жирный текст */
-    letter-spacing: 0.2px; /* Интервалы между буквами */
-    text-decoration: none;  /* Я так мучался что бы убрать гребанные подчеркивания черные */
-}
-
-.main-menu > li > a:hover {
-    text-decoration: none;   
-    color: #337AB7; /* Цвет при наведении */
-}
-
-/* Синяя линия под блоками меню */
-.main-menu > li > a:after { 
-    content: ""; /* Без нее линии не будет :( */
-    position: absolute; /* Делает позицию линии не зависимой */
-    transition: all .3s; /* Появление синий полоски. all - для всех блоков. .3s - время появления */
-    background-color: #337AB7;
-    width: 0;
-    height: 3px;
-    left: 0;
-    bottom: 10px;
-}
-
-.main-menu > li > a:hover::after {
-    width: 100%; /* Делаем появление полоски видимым именно при наведении */
-}
-
-.main-menu > li.active a:after {
-    width: 100%; /* После активации блока линия класса active будет гореть */
-}
-
-.main-menu li {
-    margin: 0;
-    white-space: nowrap; /* Осталвяем текст на одной линии */
-}
-
-.main-menu li.menu-vidvigi {
-    position: relative; /* Сдвигаем элемент на 12 пикселей относительно обычной позиции */
-    margin-right: 12px; /* Справа */
-}
-
-.main-menu li.menu-vidvigi:after {
-    content: "\2039"; /* Создание стрелочек */
-    position: absolute; /* Делаем стрелочки возле блоков, а не под ними */
-    color: #337AB7;
-    font-size: 20px;
-    font-weight: bold;
-    right: -12px;
-    top: -2px;
-    transform: rotate(-90deg); /* Делаем так, что бы стрелочки смотрели вниз */
-}
-
-.main-menu li li.menu-vidvigi:after { /* Здесь создаем стрелочки уже в самих выдвигах */
-    content: "\2039";
-    position: absolute;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: bold;
-    right: 10px;
-    top: 12px;
-    transform: rotate(180deg); /* Делаем так, что бы стрелочки смотрели вправо */
-}
-
-.main-menu li.menu-vidvigi:hover > ul { /* Делам меню выдвига видимой */ 
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.main-menu ul { /* Соединяем блоки */
-    padding: 10px 0;
-    margin: 0;
-    list-style: none;
-    background-color: #337AB7;
-    position: absolute;
-    z-index: 20; /* Ставим один слой на второй */ 
-    min-width: 220px;
-    top: 100%;
-    left: -30px;
-    opacity: 0; /* Неррозрачность */
-    visibility: hidden; /* Делаем так что бы меню выдвига появлялось только при наведении на сам блок, а не на територию под ним */
-    transform: translateY(5px); /* Расстояние от блока меню, где будет появлятся меню выдвига */
-    transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25); /* Скорость появления меню выдвига */
-}
-
-.main-menu ul li {
-    display: block;
-    padding: 0 20px; /* Внутренная обвдока блоков меню выдвига */
-    line-height: 1.1;
-}
-
-.main-menu ul li:last-child {
-    margin-bottom: 0;
-}
-
-.main-menu ul li a { /* Дизайн самих блоков меню выдвига */
-    display: block;
-    color: #fff;
-    padding: 10px;
-    transition: all .3s;
-    text-decoration: none;   
-}
-
-.main-menu ul li a:hover { /* Делаем фон блока меню выдвига белым, на которое наводимся */
-    color: #337AB7;
-    background: #FFF;
-    text-decoration: none;   
-}
-
-.main-menu ul ul { /* Размещаем второстепенное меню выдвига (второй выдвиг) */
-    top: 0;
-    left: 100%;
-}
-
-.cabinet {
-    position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 50px; /* Расположение блока */
-    top: 30px;
-}
-
-.polit {
-    position: absolute; 
-    right: 220px; 
-    top: 30px;  
-}
-
-#mobile {
-    right: 530px;
-}
-
-/* Код Миарса  */
+/* Код Мираса  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -303,17 +153,21 @@ body {
   padding : 0 ;
   transition: all .3s;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
 }
+
 ::-webkit-scrollbar-thumb {
-  background:#ff63474d;
+  background:rgba(255, 99, 71, .3);
   border-radius:2px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background:#ff6347e6;
+  background:rgba(255, 99, 71, .9);
   border-radius:2px;
 }
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -323,39 +177,39 @@ body {
 }
 
 .card {
-  margin: auto;
+  margin : auto;
   width: 350px;
-  overflow: hidden;
-  border-radius: 20px;
-  background: white;
+  overflow : hidden;
+  border-radius : 20px;
+  background : white;
   margin-top:50px;
   transition: all .2s;
   box-shadow:5px 5px 15px rgba(0,0,0, .3);
 }
 
 .card:hover {
-  box-shadow: 5px 5px 25px rgba(0,0,0, .5);
+  box-shadow:5px 5px 25px rgba(0,0,0, .5);
   transform: translate(-5px, -5px);
 }
 
-.card:hover .icon svg{
+.card:hover .icon svg {
   animation : iconjln 1s;
 }
 
-.img-cover{
+.img-cover {
   position: relative;
 }
 
-.card img{
+.card img {
   width: 350px;
   height:350px;
   object-fit:cover;
 }
 
 .icon {
-  position: absolute;
+  position:absolute;
   top:0;
-  padding: 25px;
+  padding : 25px;
   right:0;
   border-bottom-left-radius:20px;
   backdrop-filter: blur(20px);
@@ -363,21 +217,23 @@ body {
   cursor: pointer;
 }
 
-.desc{
+.desc {
   padding : 1.5em ;
   font-family: 'Poppins', sans-serif;
 }
-.desc h1{
+
+.desc h1 {
   display:inline;
 }
-.tdesc{
+
+.tdesc {
   margin-bottom:40px;
   width:100%;
   height:50px;
   overflow: auto;
 }
 
-.desc a{
+.desc a {
   text-decoration: none;
   background-color: dodgerblue;
   padding: 15px 25px;
@@ -387,10 +243,12 @@ body {
   text-align: center;
   transition: all .2s;
 }
-.desc a:hover{
+
+.desc a:hover {
   background-color: SteelBlue;
 }
-.desc a:hover svg{
+
+.desc a:hover svg {
   animation : iconjln 1s;
 }
 
@@ -409,11 +267,4 @@ body {
     opacity:0;
     transform:translateX(-100%);
   }
-}
-
-.rec {
-    margin-top: 30px;
-    margin-left: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
 }

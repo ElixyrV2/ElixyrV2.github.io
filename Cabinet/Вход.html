@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Войти</title>
+	<link rel="stylesheet" href="Вход.css" media="screen" type="text/css" />
+</head>
+<body>
+    <ul class="main-menu">
+        <li class="active"><a href="./../index.html">Главная</a></li>
+        <li class="menu-vidvigi" id="sborki">
+            <a href="#url">Готовые сборки</a>
+            <ul>
+                <li class="menu-vidvigi"><a href="#url">На базе RTX</a>
+                    <ul>
+                        <li><a href="./../Sborki/Sborka 30 series.html">На базе RTX 30 series</a></li>
+                        <li><a href="./../Sborki/Sborka 20 series.html">На базе RTX 20 series</a></li>           
+                    </ul>
+                </li>
+                <li class="menu-vidvigi"><a href="#url">На базе GTX</a>
+                    <ul>
+                        <li><a href="./../Sborki/Sborka 16 series.html">На базе GTX 16 series</a></li>
+                        <li><a href="./../Sborki/Sborka 10 series.html">На базе GTX 10 series</a></li>           
+                    </ul>
+                </li>
+                <li><a href="./../Sborki/Sborka AMD series.html">На базе AMD</a></li>           
+            </ul>
+        </li>
+        <li class="menu-vidvigi" id="compl"><a href="#url">Комплектующие</a>
+            <ul>
+                <li class="menu-vidvigi"><a href="#url">Видеокарты</a>
+                    <ul>
+                        <li class="menu-vidvigi"><a href="#url">Nvidia</a>
+                            <ul>
+                                <li><a href="./../Videocards/RTX3090.html">RTX 30 series</a></li>
+							    <li><a href="./../Videocards/RTX 20 series.html">RTX 20 series</a></li>  	         
+                            </ul>
+                        </li>   
+                        <li><a href="./../Videocards/AMD.html">AMD</a></li>   
+                    </ul>
+                </li>
+                <li class="menu-vidvigi"><a href="#url">Центральные Процессоры</a>
+                    <ul>
+                        <li><a href="./../CPU/Intel.html">Intel</a></li>
+                        <li><a href="./../CPU/AMD Proc.html">AMD</a></li>
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+        <li class="polit"><a href="./../Politic/Политика.html">Политика конфиденциальности</a></li> 
+        <li class="cabinet"><a href="Вход.html">Личный Кабинет</a></li> 
+    </ul>
+    <hr>
+    <div class="login-form">
+        <h1>Авторизация на сайте</h1>
+        <fieldset>
+            <input type="Login" placeholder=" Логин" onBlur="if(this.value=='')this.value='Логин'" onFocus="if(this.value=='Логин')this.value='' ">
+            <input type="password" placeholder=" Пароль" onBlur="if(this.value=='')this.value='Пароль'" onFocus="if(this.value=='Пароль')this.value='' ">
+            <center><a href="index.html"><button type="submit" class="REG">Войти</button></a></center>
+        </fieldset>
+        <div class="signin">
+            <p> Нет аккаунта? <a href="Регистрация.html">Зарегистрироваться</a></p>
+        </div>
+    </div>
+</body>
+</html>
