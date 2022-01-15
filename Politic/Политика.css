@@ -139,8 +139,16 @@
 
 .polit {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 250px; /* Расположение блока */
+    right: 230px; /* Расположение блока */
     top: 30px;
+}
+
+#mobile {
+    position: absolute;
+    right: 540px;
+    height: 60px;
+    width: 60px;
+    top: 20px;
 }
 
 /* Код Баги */

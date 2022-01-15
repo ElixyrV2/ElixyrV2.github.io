@@ -29,8 +29,7 @@
     color: #337AB7; /* Цвет при наведении */
 }
 
-/* Синяя линия под блоками меню */
-.main-menu > li > a:after { 
+.main-menu > li > a:after { /* Синяя линия под блоками меню */
     content: ""; /* Без нее линии не будет :( */
     position: absolute; /* Делает позицию линии не зависимой */
     transition: all .3s; /* Появление синий полоски. all - для всех блоков. .3s - время появления */
@@ -45,7 +44,7 @@
     width: 100%; /* Делаем появление полоски видимым именно при наведении */
 }
 
-.main-menu > li#sborki a:after {
+.main-menu > li#compl a:after {
     width: 100%; /* После активации блока линия класса active будет гореть */
 }
 
@@ -151,7 +150,7 @@
   top: 20px;
 }
 
-/* Код Мираса  */
+/* Код Миарса  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 

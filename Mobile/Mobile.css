@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-/**
- * Переключаемая боковая панель навигации
- * выдвигающаяся по клику слева
- */
-
 .nav {
     /*  ширна произвольная, не стесняйтесь экспериментировать */
     width: 320px;
@@ -319,6 +314,9 @@ body {
     transition: color .5s ease, padding .5s ease;
 }
 
+.main {
+    margin-left: 15px;
+}
 
 /**
  * состояние ссылок меню при наведении
@@ -380,6 +378,15 @@ body {
     transition: width 0s ease;
 }
 
+.polit {
+    position: absolute;
+    bottom: 40px;
+}
+
+.PC {
+    position: absolute;
+    bottom: 90px;
+}
 
 /* фон затемнения на основной контент 
  * при этом элементы блокируютя
