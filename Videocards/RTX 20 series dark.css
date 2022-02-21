@@ -139,21 +139,15 @@
 
 .polit {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 220px; /* Расположение блока */
+    right: 230px; /* Расположение блока */
     top: 30px;
 }
 
 #mobile {
-  right: 515px;
+  right: 540px;
   height: 60px;
   width: 60px;
   top: 20px;
-}
-
-.theme-button {
-  position: absolute;
-  right: 580px;
-  top: 30px;
 }
 
 /* Код Миарса  */
@@ -188,7 +182,7 @@ body {
   flex-wrap:wrap;
 }
 
-.card {
+.card{
   margin : auto;
   width: 350px;
   overflow : hidden;

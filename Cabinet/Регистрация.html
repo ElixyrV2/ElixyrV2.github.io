@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Регистрация</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="Регистрация.css" media="screen" type="text/css" />
 </head>
 <body>
@@ -55,24 +56,37 @@
     <div class="login-form"> 
         <fieldset>
             <h1>Регистрация на сайте</h1>
+           
             <label for="Name"><b>Имя</b></label>
-            <input type="Name" placeholder=" Ваше имя">
+            <input type="text" placeholder=" Ваше имя">
+           
             <label for="Surname"><b>Фамилия</b></label>
-            <input type="Surname" placeholder=" Ваша фамилия">
+            <input type="text" placeholder=" Ваша фамилия">
+           
             <label for="Email"><b>Почта</b></label>
-            <input type="Email" placeholder=" example@gmail.com">
+            <input type="text" placeholder=" example@gmail.com">
+           
             <label for="Phone"><b>Телефон</b></label>
-            <input type="Phone" placeholder=" Телефонный номер">
+            <input type="text" placeholder=" Телефонный номер">
+           
             <label for="Password"><b>Введите пароль</b></label>
-            <input type="Password">
+            <input type="Password" placeholder="Пароль" id="password-input" name="password">
+           
             <label for="Password"><b>Повторите пароль</b></label>
-            <input type="Password">
-            <p>При создании аккаунта вы согласны с нашей <a href="Политика.html">Политикой Конфиденциальности</a>.</p>
-            <center> <a href="./../index.html"><button type="submit" class="REG"> Зарегистрироваться</button> </a> </center>
-            </div>
-                <div class="signin">
-                 <p> Уже имеете аккаунт? <a href="Вход.html">Войти</a></p>
-            </div>
+            <input type="Password" placeholder="Повторение пароля" id="password-input2" name="password">
+
+            <div class="error"></div>
+
+            <a href="#" class="password-control"></a>
+            <a href="#" class="password-control2"></a>
+
+            <p>При создании аккаунта вы соглашаетесь с нашей <a href="Политика.html">Политикой Конфиденциальности</a>.</p>
+            <center> <a href="./../index.html"><button type="submit" class="REG" id="submit"> Зарегистрироваться</button> </a> </center>
         </fieldset>
+    </div>
+    <div class="signin">
+        <p> Уже имеете аккаунт? <a href="Вход.html">Войти</a></p>
+   </div>
+   <script src="jqreg.js"></script>
 </body>
 </html>

@@ -29,7 +29,8 @@
     color: #337AB7; /* Цвет при наведении */
 }
 
-.main-menu > li > a:after { /* Синяя линия под блоками меню */
+/* Синяя линия под блоками меню */
+.main-menu > li > a:after { 
     content: ""; /* Без нее линии не будет :( */
     position: absolute; /* Делает позицию линии не зависимой */
     transition: all .3s; /* Появление синий полоски. all - для всех блоков. .3s - время появления */
@@ -139,21 +140,15 @@
 
 .polit {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 220px; /* Расположение блока */
+    right: 230px; /* Расположение блока */
     top: 30px;
 }
 
 #mobile {
-  right: 515px;
+  right: 540px;
   height: 60px;
   width: 60px;
   top: 20px;
-}
-
-.theme-button {
-  position: absolute;
-  right: 580px;
-  top: 30px;
 }
 
 /* Код Миарса  */

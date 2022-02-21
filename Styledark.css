@@ -1,3 +1,9 @@
+body {
+    max-width: 100%;
+    background: #373737;
+    color: #f4f4f4;
+}
+
 .main-menu {
     list-style: none;
     font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
@@ -14,7 +20,7 @@
 }
 
 .main-menu > li > a {
-    color: #000; /* Цвет текста */
+    color: #fff; /* Цвет текста */
     position: relative; /* Cдвигает элемент относительно его обычного положения */
     padding: 0 0 20px 0; /* Внутренние оступы, сделал отсуп снизу, что бы линия была под блоком */
     text-transform: uppercase;  /* Капс в li менюшках */
@@ -29,7 +35,8 @@
     color: #337AB7; /* Цвет при наведении */
 }
 
-.main-menu > li > a:after { /* Синяя линия под блоками меню */
+/* Синяя линия под блоками меню */
+.main-menu > li > a:after { 
     content: ""; /* Без нее линии не будет :( */
     position: absolute; /* Делает позицию линии не зависимой */
     transition: all .3s; /* Появление синий полоски. all - для всех блоков. .3s - время появления */
@@ -44,7 +51,7 @@
     width: 100%; /* Делаем появление полоски видимым именно при наведении */
 }
 
-.main-menu > li#compl a:after {
+.main-menu > li.active a:after {
     width: 100%; /* После активации блока линия класса active будет гореть */
 }
 
@@ -138,22 +145,22 @@
 }
 
 .polit {
-    position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 220px; /* Расположение блока */
-    top: 30px;
+    position: absolute; 
+    right: 220px; 
+    top: 30px;  
 }
 
 #mobile {
-  right: 515px;
-  height: 60px;
-  width: 60px;
-  top: 20px;
+    right: 515px;
+    height: 60px;
+    width: 60px;
+    top: 20px;
 }
 
 .theme-button {
-  position: absolute;
-  right: 580px;
-  top: 30px;
+    position: absolute;
+    right: 580px;
+    top: 30px;
 }
 
 /* Код Миарса  */
@@ -165,21 +172,17 @@ body {
   padding : 0 ;
   transition: all .3s;
 }
-
 ::-webkit-scrollbar {
   width: 5px;
 }
-
 ::-webkit-scrollbar-thumb {
-  background:rgba(255, 99, 71, .3);
+  background:#ff63474d;
   border-radius:2px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background:rgba(255, 99, 71, .9);
+  background:#ff6347e6;
   border-radius:2px;
 }
-
 .container {
   width: 80%;
   margin: 0 auto;
@@ -189,39 +192,39 @@ body {
 }
 
 .card {
-  margin : auto;
+  margin: auto;
   width: 350px;
-  overflow : hidden;
-  border-radius : 20px;
-  background : white;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #000;
   margin-top:50px;
   transition: all .2s;
-  box-shadow:5px 5px 15px rgba(0,0,0, .3);
+  box-shadow:5px 5px 15px rgba(0,0,0, .3);  
 }
 
 .card:hover {
-  box-shadow:5px 5px 25px rgba(0,0,0, .5);
+  box-shadow: 5px 5px 25px rgba(0,0,0, .5);
   transform: translate(-5px, -5px);
 }
 
-.card:hover .icon svg {
+.card:hover .icon svg{
   animation : iconjln 1s;
 }
 
-.img-cover {
+.img-cover{
   position: relative;
 }
 
-.card img {
+.card img{
   width: 350px;
   height:350px;
   object-fit:cover;
 }
 
 .icon {
-  position:absolute;
+  position: absolute;
   top:0;
-  padding : 25px;
+  padding: 25px;
   right:0;
   border-bottom-left-radius:20px;
   backdrop-filter: blur(20px);
@@ -229,23 +232,21 @@ body {
   cursor: pointer;
 }
 
-.desc {
+.desc{
   padding : 1.5em ;
   font-family: 'Poppins', sans-serif;
 }
-
-.desc h1 {
+.desc h1{
   display:inline;
 }
-
-.tdesc {
+.tdesc{
   margin-bottom:40px;
   width:100%;
   height:50px;
   overflow: auto;
 }
 
-.desc a {
+.desc a{
   text-decoration: none;
   background-color: dodgerblue;
   padding: 15px 25px;
@@ -255,12 +256,10 @@ body {
   text-align: center;
   transition: all .2s;
 }
-
-.desc a:hover {
+.desc a:hover{
   background-color: SteelBlue;
 }
-
-.desc a:hover svg {
+.desc a:hover svg{
   animation : iconjln 1s;
 }
 
@@ -279,4 +278,11 @@ body {
     opacity:0;
     transform:translateX(-100%);
   }
+}
+
+.rec {
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }

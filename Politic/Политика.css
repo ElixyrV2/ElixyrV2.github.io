@@ -139,13 +139,13 @@
 
 .polit {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 230px; /* Расположение блока */
+    right: 220px; /* Расположение блока */
     top: 30px;
 }
 
 #mobile {
     position: absolute;
-    right: 540px;
+    right: 500px;
     height: 60px;
     width: 60px;
     top: 20px;
@@ -181,4 +181,38 @@
 .konec1 {
     display: flex;
     justify-content: space-around;
+}
+.back {
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    z-index: 9999;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+    display: none;
+  }
+  
+  .back:hover {
+    background: #e9ebec;
+    color: #000;
+  }
+  
+  .back-show {
+    display: block;
+    animation: trackScroll 0.7s linear forwards;
+}
+
+@keyframes trackScroll {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

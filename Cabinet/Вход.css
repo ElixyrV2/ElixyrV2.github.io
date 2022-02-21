@@ -15,7 +15,9 @@ input {
 }
 
 .login-form {
-	margin: 250px auto;
+    position: absolute;
+	right: 40%;
+    top: 30%;
 	width: 290px;
 	background: #fff;
 }
@@ -31,7 +33,7 @@ input {
 }
 
 .login-form 
-input[type="Login"],
+input[type="text"],
 input[type="password"] {
 	background: #f1f1f1;
 	margin-top: 10px;
@@ -41,7 +43,7 @@ input[type="password"] {
 }
 
 .login-form 
-input[type="Login"]:focus,
+input[type="rext"]:focus,
 input[type="password"]:focus{
 	background-color: #ddd;
 }
@@ -52,7 +54,7 @@ input[type="password"]:focus{
 	border-radius: 23px;
 	color: #fff;
 	font-weight: bold;
-	margin-top: 10px;
+	margin-top: -10px;
 	padding: 12px 20px;
   	cursor: pointer;
   	opacity: 0.9;
@@ -63,7 +65,7 @@ input[type="password"]:focus{
 	opacity:1;
 }
 
-.signin{
+.signin {
 	text-align: center;
 }
 
@@ -218,3 +220,26 @@ input[type="password"]:focus{
     width: 60px;
     top: 20px;
 }
+
+.err {
+	outline: 1px solid red;
+}
+
+.errText {
+	color: red;
+    margin-top: 5px;
+}
+
+.password-control {
+    position: relative;
+    bottom: 32px;
+    left: 210px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+   }
+
+   .password-control.view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+   }

@@ -32,10 +32,7 @@ input {
 }
 
 .login-form
-input[type=Name], 
-input[type=Surname],
-input[type=Email],
-input[type=Phone], 
+input[type=text],  
 input[type=Password] {
 	padding: 12px 10px;
 	width: 250px;
@@ -44,10 +41,7 @@ input[type=Password] {
 }
 
 .login-form 
-input[type=Name]:focus,
-input[type=Surname]:focus,
-input[type=Email]:focus,
-input[type=Phone]:focus, 
+input[type=text]:focus,
 input[type=Password]:focus {
 	background-color: #ddd;
 }
@@ -236,3 +230,33 @@ input {
     width: 60px;
     top: 20px;
 }
+
+.password-control {
+    position: absolute;
+    top: 586px;
+    right: 650px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+   }
+   .password-control.view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+   }
+
+   .password-control2 {
+    position: absolute;
+    top: 654px;
+    right: 650px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+   }
+   .password-control2.view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+   }
+
+   .error {
+       color: #ff0000;
+   }

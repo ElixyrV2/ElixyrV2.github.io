@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+* {box-sizing: border-box}
 .nav {
     width: 320px;
     min-width: 320px;
@@ -260,15 +260,6 @@ body {
     transition: width 0s ease;
 }
 
-.polit {
-    position: absolute;
-    bottom: 40px;
-}
-
-.PC {
-    position: absolute;
-    bottom: 90px;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -390,4 +381,38 @@ body {
     margin-left: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+}
+.back {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 9999;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+  display: none;
+}
+
+.back:hover {
+  background: #e9ebec;
+  color: #000;
+}
+
+.back-show {
+  display: block;
+  animation: trackScroll 0.7s linear forwards;
+}
+
+@keyframes trackScroll {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
 }

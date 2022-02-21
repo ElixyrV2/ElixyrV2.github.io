@@ -1,5 +1,78 @@
 @charset "UTF-8";
-* {box-sizing: border-box}
+* {
+  box-sizing: border-box
+}
+
+body {
+	background: #fff;
+	background-attachment: fixed; /* Фон страницы фиксируется */
+	font-family: Lucida Console;
+}
+
+h1 { 
+	margin: 0; 
+}
+
+input {
+	font-family: Lucida Console;
+	font-size: inherit;
+	margin: 0;
+}
+
+.login-form {
+	margin: 250px auto;
+	width: 290px;
+	background: #fff;
+}
+
+.login-form h1 {
+	background-color: #282830;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	font-size: 14px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.login-form 
+input[type="Login"],
+input[type="password"] {
+	background: #f1f1f1;
+	margin-top: 10px;
+	padding: 12px 10px;
+	width: 248px;
+	border-radius: 23px;
+}
+
+.login-form 
+input[type="Login"]:focus,
+input[type="password"]:focus{
+	background-color: #ddd;
+}
+
+.REG {
+	background: #337AB7;
+	font-family: Lucida Console;
+	border-radius: 23px;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 12px 20px;
+  	cursor: pointer;
+  	opacity: 0.9;
+	object-position: fixed;
+}
+
+.REG:hover{
+	opacity:1;
+}
+
+.signin{
+	text-align: center;
+}
+
+
 .nav {
     width: 320px;
     min-width: 320px;
@@ -212,7 +285,7 @@ body {
     transition: color .5s ease, padding .5s ease;
 }
 
-.sborki {
+.main {
     margin-left: 15px;
 }
 
@@ -260,7 +333,6 @@ body {
     -webkit-transition: width 0s ease;
     transition: width 0s ease;
 }
-
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
