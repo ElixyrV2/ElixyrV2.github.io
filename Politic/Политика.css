@@ -208,6 +208,11 @@
     animation: trackScroll 0.7s linear forwards;
 }
 
+  h3, h4 {
+      margin-right: 200px;
+      margin-left: 200px;
+  }
+
 @keyframes trackScroll {
   0% {
     opacity: 0;

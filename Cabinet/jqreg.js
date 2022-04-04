@@ -1,4 +1,5 @@
 jQuery(document).ready(function($){
+    
     $('body').on('click', '.password-control', function(){
 
      if ($('#password-input').attr('type') == 'password'){
