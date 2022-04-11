@@ -1,3 +1,24 @@
+.progress-6 {
+    width:120px;
+    height:22px;
+    border-radius: 20px;
+    color:#514b82;
+    border:2px solid;
+    position: relative;
+}
+.progress-6::before {
+    content:"";
+    position: absolute;
+    margin:2px;
+    inset:0 100% 0 0;
+    border-radius: inherit;
+    background:currentColor;
+    animation:p6 2s infinite;
+}
+@keyframes p6 {
+    100% {inset:0}
+}
+
 body {
     max-width: 100%;
     background: #373737;
@@ -140,18 +161,18 @@ body {
 
 .cabinet {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 50px; /* Расположение блока */
+    right: 40px; /* Расположение блока */
     top: 30px;
 }
 
 .polit {
     position: absolute; 
-    right: 220px; 
+    right: 210px;
     top: 30px;  
 }
 
 #mobile {
-    right: 500px;
+    right: 490px;
     height: 60px;
     width: 60px;
     top: 20px;
@@ -159,7 +180,7 @@ body {
 
 .theme-button {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 570px; /* Расположение блока */
+    right: 560px; /* Расположение блока */
     top: 30px;
 }
 /* Всплывающая форма-скрыта по умолчанию */
