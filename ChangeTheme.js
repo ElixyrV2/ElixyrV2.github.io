@@ -1,3 +1,25 @@
+window.onload = function(){
+    var modal = document.getElementById('myModal')
+    var btn = document.getElementById("show-modal");
+    var span = document.getElementsByClassName("close")[0];
+    
+    
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+    
+    
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
 let btn = document.getElementById("theme-button");
 let link = document.getElementById("theme-link");
 
@@ -226,3 +248,4 @@ document.querySelector(".demo-cont__credits-close").addEventListener("click", fu
 document.querySelector(".js-activate-global-blending").addEventListener("click", function() {
     document.querySelector(".example-slider").classList.toggle("m--global-blending-active");
 });
+

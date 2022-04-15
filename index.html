@@ -62,7 +62,7 @@
             <div class="form-popup" id="myForm">
                 <form class="form-container">
                     <h2 class="form-h2">Войти</h2>
-
+                    
                     <label for="email"><b>Почта</b></label>
                     <input type="text" placeholder="Введите Почту" name="email" required>
 
@@ -70,7 +70,7 @@
                     <input type="password" placeholder="Введите Пароль" name="psw" required>
 
                     <button type="submit" class="btn-submit">Войти</button>
-                    <button type="submit" class="buttons btn-reg" onclick="closeForm()">Регистрация</button>
+                    <button type="submit" class="buttons btn-reg" id="show-modal">Регистрация</button>
                     <button type="submit" class="buttons btn-cancel" onclick="closeForm()">Закрыть</button>
                 </form>
             </div>
@@ -195,7 +195,48 @@
             </nav>
         </div>
     </div>
-
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h1>Регистрация на сайте</h1>
+          </div>
+          <div class="modal-body">
+            <label for="Name"><br><b>Имя</b><br></label>
+            <input type="text" placeholder=" Ваше имя">
+           
+            <label for="Surname"><br><b>Фамилия</b><br></label>
+            <input type="text" placeholder=" Ваша фамилия">
+           
+            <label for="Email"><br><b>Почта</b></label><br>
+            <input type="text" placeholder=" example@gmail.com">
+           
+            <label for="Phone"><br><b>Телефон</b></label><br>
+            <input type="text" placeholder=" Телефонный номер">
+           
+            <label for="Password"><br><b>Введите пароль</b><br></label>
+            <input type="Password" placeholder="Введите пароль" id="password-input" name="password">
+           
+            <label for="Password"><br><b>Повторите пароль</b><br></label>
+            <input type="Password" placeholder="Повторите пароль" id="password-input2" name="password">
+      
+            <div class="error"></div>
+      
+            <a href="#" class="password-control"></a>
+            <a href="#" class="password-control2"></a>
+      
+            <p>При создании аккаунта вы соглашаетесь с нашей <a href="Politic/Политика.html">Политикой Конфиденциальности</a>.</p>
+            <center> <a href="./../index.html"><button type="submit" class="REG" id="submit"> Зарегистрироваться</button> </a> </center>
+          </div>
+          <br>
+          <div class="modal-footer">
+            <div class="signin">
+              <p> Уже имеете аккаунт? <a href="Cabinet/Вход.html">Войти</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
     <script src="ChangeTheme.js"></script>
     <script src="loader.js"></script>
   </body>

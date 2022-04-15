@@ -956,3 +956,148 @@ body {
     transition-timing-function: ease;
     transform: rotate(-45deg) scaleX(0) translateZ(0);
 }
+#myBtn {
+    background-color: #9C27B0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 180px;
+  }
+  
+  
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: relative; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  
+  .modal-content {
+      position: relative;
+      background-color: white;
+      margin: auto;
+      padding: 0;
+      border: 5px solid #000;
+      width: 35%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+  }
+  
+  
+  @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+  }
+  
+  .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  .modal-header {
+      padding: 2px 16px;
+      text-align: center;
+      background-color: #000;
+      color: white;
+  }
+  
+  .modal-body {
+      padding: 2px 16px;
+      text-align: center;
+    }
+  
+  .modal-footer {
+      padding: 2px 16px;
+      text-align: center;
+      border: 1px solid #000;
+      background-color: white;
+      color: black;
+  }
+
+  input {
+	font-family: Lucida Console;
+	font-size: inherit;
+	margin-top: 0;
+}
+
+.modal-body h1 {
+	background-color: #282830;
+	border-radius: 5px 5px;
+	color: #fff;
+	font-size: 14px;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.modal-body
+input[type=text],  
+input[type=Password] {
+	padding: 12px 10px;
+	width: 325px;
+	border-radius: 23px;
+  	background: #f1f1f1;
+}
+
+.modal-body 
+input[type=text]:focus,
+input[type=Password]:focus {
+	background-color: #ddd;
+}
+
+.REG {
+	background: #337AB7;
+	font-family: Lucida Console;
+	border-radius: 23px;
+	color: #fff;
+	font-weight: bold;
+	margin-top: 10px;
+	padding: 12px 20px;
+  	cursor: pointer;
+  	opacity: 0.9;
+	object-position: fixed;
+}
+
+.REG:hover {
+	opacity: 1;
+}
+
+a {
+	color: dodgerblue;
+}
+
+.signin {
+	text-align: center;
+}
+
+input {
+	margin-bottom: 10px;
+}
