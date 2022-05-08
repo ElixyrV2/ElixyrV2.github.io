@@ -1,136 +1,480 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Магазин</title>
-    <link rel="stylesheet" href="Sborka 30 series.css">
-  </head>
+    <link rel="stylesheet" href="Sborki.css" id="theme-link">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
 <body>
-    <ul class="main-menu">
-        <li class="active"><a href="./../index.html">Главная</a></li>
-        <li class="menu-vidvigi" id="sborki">
-            <a href="#url">Готовые сборки</a>
-            <ul>
-                <li class="menu-vidvigi"><a href="#url">На базе RTX</a>
-                    <ul>
-                        <li><a href="Sborka 30 series.html">На базе RTX 30 series</a></li>
-                        <li><a href="Sborka 20 series.html">На базе RTX 20 series</a></li>           
-                    </ul>
-                </li>
-                <li class="menu-vidvigi"><a href="#url">На базе GTX</a>
-                    <ul>
-                        <li><a href="Sborka 16 series.html">На базе GTX 16 series</a></li>
-                        <li><a href="Sborka 10 series.html">На базе GTX 10 series</a></li>           
-                    </ul>
-                </li>
-                <li><a href="Sborka AMD series.html">На базе AMD</a></li>           
-            </ul>
-        </li>
-        <li class="menu-vidvigi" id="compl"><a href="#url">Комплектующие</a>
-            <ul>
-                <li class="menu-vidvigi"><a href="#url">Видеокарты</a>
-                    <ul>
-                        <li class="menu-vidvigi"><a href="#url">Nvidia</a>
-                            <ul>
-                                <li><a href="./../Videocards/RTX 30 series.html">RTX 30 series</a></li>
-							    <li><a href="./../Videocards/RTX 20 series.html">RTX 20 series</a></li>  	         
-                            </ul>
-                        </li>   
-                        <li><a href="./../Videocards/AMD.html">AMD</a></li>   
-                    </ul>
-                </li>
-                <li class="menu-vidvigi"><a href="#url">Центральные Процессоры</a>
-                    <ul>
-                        <li><a href="./../CPU/Intel.html">Intel</a></li>
-                        <li><a href="./../CPU/AMD Proc.html">AMD</a></li>
-                    </ul>  
-                </li>
-            </ul>
-        </li>
-        <li class="polit"><a href="./../Politic/Политика.html">Политика конфиденциальности</a></li> 
-        <li class="cabinet"><a href="./../Cabinet/Вход.html">Личный Кабинет</a></li> 
-        <li class="polit" id="mobile"><a href="./../Mobile/Mobile.html"><img src="https://cdn-icons-png.flaticon.com/512/35/35406.png" alt="" height="40px" width="40px"></a></li> 
-    <hr>
-	
-<!-- Код Миарса -->
+<ul class="main-menu">
+    <li class="active"><a href="./../index.html">Главная</a></li>
+    <li class="menu-vidvigi" id="sborki">
+        <a href="#url">Готовые сборки</a>
+        <ul>
+            <li class="menu-vidvigi"><a href="#url">На базе RTX</a>
+                <ul>
+                    <li><a href="Sborka 30 series.html">На базе RTX 30 series</a></li>
+                    <li><a href="Sborka 20 series.html">На базе RTX 20 series</a></li>
+                </ul>
+            </li>
+            <li class="menu-vidvigi"><a href="#url">На базе GTX</a>
+                <ul>
+                    <li><a href="Sborka 16 series.html">На базе GTX 16 series</a></li>
+                    <li><a href="Sborka 10 series.html">На базе GTX 10 series</a></li>
+                </ul>
+            </li>
+            <li><a href="Sborka AMD series.html">На базе AMD</a></li>
+        </ul>
+    </li>
+    <li class="menu-vidvigi" id="compl"><a href="#url">Комплектующие</a>
+        <ul>
+            <li class="menu-vidvigi"><a href="#url">Видеокарты</a>
+                <ul>
+                    <li class="menu-vidvigi"><a href="#url">Nvidia</a>
+                        <ul>
+                            <li><a href="./../Videocards/RTX 30 series.html">RTX 30 series</a></li>
+                            <li><a href="./../Videocards/RTX 20 series.html">RTX 20 series</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./../Videocards/AMD.html">AMD</a></li>
+                </ul>
+            </li>
+            <li class="menu-vidvigi"><a href="#url">Центральные Процессоры</a>
+                <ul>
+                    <li><a href="./../CPU/Intel.html">Intel</a></li>
+                    <li><a href="./../CPU/AMD Proc.html">AMD</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
 
-	<div class="container">
-        <div class="card">
-            <div class="img-cover"><img src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/c/c/cc0824cb27eee4f65d15909cbebd6ddcbd14f705_253529_1.jpg">
-                <div class="icon">
-                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="black" stroke-width="3"/>
-                    </svg>
-                </div>
-            </div>  
-            <div class="desc">
-                <h1>PBA Neo Game</h1>
-                <p>Игровой компьютер PBA Neo Game (Ci9-11900 2,5GHz/128GB/2TB/6TB/СЖО/RTX3090 24GB/DistroCase 350P)</p>
-                <a href ="">Подробнее  
-                    <svg width="19" height="14" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="white" stroke-width="3"/>
-                 </svg>
-                </a>
-            </div>
-        </div>
+    <li class="cabinet" onclick="openForm()"><a href="#">Личный Кабинет</a></li>
 
-        <div class="card">
-            <div class="img-cover"><img src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/9/a92e5a7bf78f6bc61c466e37e6cbb99808eb3505_246907_1cd.jpg">
-                <div class="icon">
-                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="black" stroke-width="3"/>
-                    </svg>
-                </div>
-            </div>  
-            <div class="desc">
-                <h1>PBA Neo Game</h1>
-                <p>Игровой компьютер PBA Neo Game (Ci9-11900 2,5Ghz/32GB/1TB/6TB/ RTX3080 10GB/СЖО LC360/GX601 HELIOS WH)</p>
-                <a href ="">Подробнее 
-                    <svg width="19" height="14" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="white" stroke-width="3"/>
-                    </svg>
-                </a>
-             </div>
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <h2 class="form-h2">Войти</h2>
+
+            <label for="email"><b>Почта</b></label>
+            <input type="text" placeholder="Введите Почту" name="email" required>
+
+            <label for="psw"><b>Пароль</b></label>
+            <input type="password" placeholder="Введите Пароль" name="psw" required>
+
+            <button type="submit" class="btn-submit">Войти</button>
+            <button type="submit" class="buttons btn-reg" id="show-modal" onclick="closeForm()">Регистрация</button>
+            <button type="submit" class="buttons btn-cancel" onclick="closeForm()">Закрыть</button>
+        </form>
+    </div>
+</ul>
+<hr>
+
+
+<input type="checkbox" id="nav-toggle" hidden>
+<nav class="nav">
+    <label for="nav-toggle" class="nav-toggle" onclick></label>
+    <h2 class="logo">
+        <a href="#url">Bagashop.com</a>
+    </h2>
+    <ul>
+        <li>
+            <a href="./Politic/Политика.html">Политика
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-columns-reverse" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z"/>
+                </svg>
+            </a>
+        </li>
+
+        <li class="PC">
+            <a href="./Mobile/Mobile.html">Мобильная версия
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16">
+                    <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"/>
+                </svg>
+            </a>
+
+        <li id="theme-button">
+            <a href="#">Сменить тему
+                <img class="img1" src="./../images/moon.png" height="20px" width="20px">
+            </a>
+        </li>
+    </ul>
+</nav>
+
+
+<!--Модальное окно (регистрация)-->
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h1>Регистрация на сайте</h1>
         </div>
-  
-        <div class="card">
-            <div class="img-cover"><img src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/8/a8b28a358f258f2f7d5adaa9e38bc15e9d80b555_244647_1c.jpg">
-                <div class="icon">
-                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="black" stroke-width="3"/>
-                    </svg>
-                </div>
-            </div>   
-            <div class="desc">
-                <h1>Neo Game</h1>
-                <p>Игровой компьютер Neo Game (Ci9-10900 2,8GHz /64GB/4TB/6TB /RTX3070S 8GB/СЖО/wi-fi/ LC360/CougarBlazer)</p>
-                <a href ="">Подробнее 
-                    <svg width="19" height="14" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="white" stroke-width="3"/>
-                    </svg>
-                </a>
+        <div class="modal-body">
+            <label for="Name"><br><b>Имя</b><br></label>
+            <input type="text" placeholder=" Ваше имя">
+
+            <label for="Surname"><br><b>Фамилия</b><br></label>
+            <input type="text" placeholder=" Ваша фамилия">
+
+            <label for="Email"><br><b>Почта</b></label><br>
+            <input type="text" placeholder=" example@gmail.com">
+
+            <label for="Phone"><br><b>Телефон</b></label><br>
+            <input type="text" placeholder=" Телефонный номер">
+
+            <label for="Password"><br><b>Введите пароль</b><br></label>
+            <input type="Password" placeholder="Введите пароль" id="password-input" name="password">
+
+            <label for="Password"><br><b>Повторите пароль</b><br></label>
+            <input type="Password" placeholder="Повторите пароль" id="password-input2" name="password">
+
+            <div class="error"></div>
+
+            <a href="#" class="password-control"></a>
+            <a href="#" class="password-control2"></a>
+
+            <p>При создании аккаунта вы соглашаетесь с нашей <a href="Politic/Политика.html">Политикой Конфиденциальности</a>.</p>
+            <center> <a href="./../index.html"><button type="submit" class="REG" id="submit"> Зарегистрироваться</button> </a> </center>
+        </div>
+        <br>
+        <div class="modal-footer">
+            <div class="signin">
+                <p> Уже имеете аккаунт? <a href="Cabinet/Вход.html">Войти</a></p>
             </div>
         </div>
-  
-        <div class="card">
-            <div class="img-cover"><img src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/0/6/0631f2c5b5db49a7471fb64292c3ac4f100880ac_237680_1.jpg">
-                <div class="icon">
-                    <svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="black" stroke-width="3"/>
-                    </svg>
+    </div>
+</div>
+
+<!-- Окошки -->
+
+<div class="blocks">
+    <div class="wrapper">
+        <div class="container">
+            <div class="top"><img class="card-img" src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/c/c/cc0824cb27eee4f65d15909cbebd6ddcbd14f705_253529_1.jpg" alt=""></div>
+            <div class="bottom bottom-1">
+                <div class="left">
+                    <div class="details">
+                        <h1>PBA Neo Game</h1>
+                        <p class="details-l-p">KZT 800.000</p>
+                    </div>
+                    <div class="buy buy-1"><i class="material-icons buy-i"></i></div>
+                </div>
+                <div class="right">
+                    <div class="done"><i class="material-icons done-i">Готово!</i></div>
+                    <div class="details">
+                        <h1>PBA Neo Game</h1>
+                        <p class="details-r-p">Добавлен в корзину</p>
+                    </div>
+                    <div class="remove remove-1"><i class="material-icons remove-i"></i></div>
                 </div>
             </div>
+        </div>
+        <div class="inside">
+            <div class="icon"><i class="material-icons">i</i></div>
+            <div class="contents">
+                <table>
+                    <tr>
+                        <th>Процессор</th>
+                        <th>SSD</th>
+                    </tr>
+                    <tr>
+                        <td>i9-11900</td>
+                        <td>2 TB</td>
+                    </tr>
+                    <tr>
+                        <th>Видеокарта</th>
+                        <th>Мощность БП</th>
+                    </tr>
+                    <tr>
+                        <td>RTX3090 24GB</td>
+                        <td>1000w</td>
+                    </tr>
+                    <tr>
+                        <th>HDD</th>
+                        <th>RAM</th>
+                    </tr>
+                    <tr>
+                        <td>6 TB</td>
+                        <td>32 GB</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
     
-            <div class="desc">
-                <h1>Neo Game</h1>
-                <p>Игровой компьютер Neo Game (Ci7-10700K 3,8Ghz/32GB/1TB/6TB/ RTX3060Ti 8GB/СЖО TT M360/CoreP3)</p>
-                <a href ="">Подробнее
-                    <svg width="19" height="14" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 9H22M12 1.5L20.9333 8.2C21.4667 8.6 21.4667 9.4 20.9333 9.8L12 16.5" stroke="white" stroke-width="3"/>
-                    </svg>
-                </a>
+
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="top"><img class="card-img" src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/9/a92e5a7bf78f6bc61c466e37e6cbb99808eb3505_246907_1cd.jpg" alt=""></div>
+            <div class="bottom bottom-2">
+                <div class="left">
+                    <div class="details">
+                        <h1>PBA Neo Game</h1>
+                        <p class="details-l-p">KZT 750.000</p>
+                    </div>
+                    <div class="buy buy-2"><i class="material-icons buy-i"></i></div>
+                </div>
+                <div class="right">
+                    <div class="done"><i class="material-icons done-i">Готово!</i></div>
+                    <div class="details">
+                        <h1>PBA Neo Game</h1>
+                        <p class="details-r-p">Добавлен в корзину</p>
+                    </div>
+                    <div class="remove remove-2"><i class="material-icons remove-i"></i></div>
+                </div>
             </div>
         </div>
-    </div>	
+        <div class="inside">
+            <div class="icon"><i class="material-icons">i</i></div>
+            <div class="contents">
+                <table>
+                    <tr>
+                        <th>Процессор</th>
+                        <th>SSD</th>
+                    </tr>
+                    <tr>
+                        <td>i9-11900</td>
+                        <td>1 TB</td>
+                    </tr>
+                    <tr>
+                        <th>Видеокарта</th>
+                        <th>Мощность БП</th>
+                    </tr>
+                    <tr>
+                        <td>RTX3080 10GB</td>
+                        <td>1000w</td>
+                    </tr>
+                    <tr>
+                        <th>HDD</th>
+                        <th>RAM</th>
+                    </tr>
+                    <tr>
+                        <td>6 TB</td>
+                        <td>32 GB</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="top"><img class="card-img" src="https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/8/a8b28a358f258f2f7d5adaa9e38bc15e9d80b555_244647_1c.jpg" alt=""></div>
+            <div class="bottom bottom-3">
+                <div class="left">
+                    <div class="details">
+                        <h1>PBA Neo Game</h1>
+                        <p class="details-l-p">KZT 780.000</p>
+                    </div>
+                    <div class="buy buy-3"><i class="material-icons buy-i"></i></div>
+                </div>
+                <div class="right">
+                    <div class="done"><i class="material-icons done-i">Готово!</i></div>
+                    <div class="details">
+                        <h1>PBA Neo Game</h1>
+                        <p class="details-r-p">Добавлен в корзину</p>
+                    </div>
+                    <div class="remove remove-3"><i class="material-icons remove-i"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="inside">
+            <div class="icon"><i class="material-icons">i</i></div>
+            <div class="contents">
+                <table>
+                    <tr>
+                        <th>Процессор</th>
+                        <th>SSD</th>
+                    </tr>
+                    <tr>
+                        <td>i9-10900</td>
+                        <td>4 TB</td>
+                    </tr>
+                    <tr>
+                        <th>Видеокарта</th>
+                        <th>Мощность БП</th>
+                    </tr>
+                    <tr>
+                        <td>RTX3070S 8GB</td>
+                        <td>1000w</td>
+                    </tr>
+                    <tr>
+                        <th>HDD</th>
+                        <th>RAM</th>
+                    </tr>
+                    <tr>
+                        <td>6 TB</td>
+                        <td>64 GB</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="sborki.js"></script>
+<script src="sborkiTheme.js"></script>
+
 </body>
+
+
+<footer>
+    <div class="footer">
+        <div class="bubbles">
+            <div class="bubble" style="--size:4.587632749545656rem; --distance:6.084951376356603rem; --position:-0.5904753977487172%; --time:2.041139373936903s; --delay:-2.3512795306221292s;"></div>
+            <div class="bubble" style="--size:2.945616284780802rem; --distance:9.899716812933477rem; --position:29.437150253426275%; --time:3.195094631320818s; --delay:-3.163618650450356s;"></div>
+            <div class="bubble" style="--size:4.652576278505014rem; --distance:7.7562805662474785rem; --position:83.57584994638299%; --time:2.691129403465117s; --delay:-3.935201486200388s;"></div>
+            <div class="bubble" style="--size:3.189463086209715rem; --distance:7.520439555593697rem; --position:34.00002599297754%; --time:3.019265674409597s; --delay:-2.8709829061530883s;"></div>
+            <div class="bubble" style="--size:2.0317082089378955rem; --distance:6.058315960229139rem; --position:-3.1875440618985396%; --time:3.6635789456650327s; --delay:-3.0343252016586932s;"></div>
+            <div class="bubble" style="--size:5.042150292824665rem; --distance:6.08490479686146rem; --position:17.29618846753808%; --time:3.9135579489077603s; --delay:-3.3567732373704047s;"></div>
+            <div class="bubble" style="--size:2.181401883906445rem; --distance:7.686299230631702rem; --position:53.84895919696153%; --time:3.4047435082889486s; --delay:-3.053506551204261s;"></div>
+            <div class="bubble" style="--size:2.5235104944351674rem; --distance:7.4520039478487945rem; --position:3.849800291890391%; --time:2.4569915403107525s; --delay:-3.5224675946160255s;"></div>
+            <div class="bubble" style="--size:5.651018651585769rem; --distance:9.584538843740972rem; --position:16.126943421471477%; --time:3.1882715936343873s; --delay:-3.782844615191845s;"></div>
+            <div class="bubble" style="--size:2.196906776568789rem; --distance:9.971624893144963rem; --position:81.32257998660437%; --time:2.5991328903257904s; --delay:-3.749342050167741s;"></div>
+            <div class="bubble" style="--size:4.5838051848644366rem; --distance:7.0686727740285225rem; --position:13.197868751355866%; --time:3.684453183438699s; --delay:-2.800738002854686s;"></div>
+            <div class="bubble" style="--size:3.6753014826301493rem; --distance:7.240175847151327rem; --position:85.7935457500231%; --time:2.836561401231873s; --delay:-2.704977961627244s;"></div>
+            <div class="bubble" style="--size:3.659548929185415rem; --distance:8.234502194512688rem; --position:3.7168149667835024%; --time:3.663456037317383s; --delay:-3.224067773711136s;"></div>
+            <div class="bubble" style="--size:3.9036246269731762rem; --distance:9.661157159445121rem; --position:57.78209336829864%; --time:3.193372220311628s; --delay:-3.225358625890488s;"></div>
+            <div class="bubble" style="--size:3.050206793810113rem; --distance:9.353105562675305rem; --position:92.81650181408321%; --time:2.4213865072381147s; --delay:-2.9645091751890322s;"></div>
+            <div class="bubble" style="--size:4.713425582639155rem; --distance:8.416651868201754rem; --position:90.04989567665969%; --time:3.8384767837995653s; --delay:-3.998962613068723s;"></div>
+            <div class="bubble" style="--size:5.7942218302758155rem; --distance:7.752664322274719rem; --position:93.20818004223557%; --time:2.8978602794229533s; --delay:-3.0445473227007653s;"></div>
+            <div class="bubble" style="--size:2.447595559029301rem; --distance:6.009455490016831rem; --position:35.015753267049604%; --time:2.0656956041452164s; --delay:-2.7474193674398264s;"></div>
+            <div class="bubble" style="--size:3.376498728724167rem; --distance:7.30221430378536rem; --position:58.99109585218301%; --time:2.2883190841967243s; --delay:-3.151092800647386s;"></div>
+            <div class="bubble" style="--size:4.8282027294752785rem; --distance:6.872303041669721rem; --position:91.45654237550674%; --time:2.8802508634770745s; --delay:-2.071450599747588s;"></div>
+            <div class="bubble" style="--size:4.517091677651451rem; --distance:9.659820679630458rem; --position:36.24571311109261%; --time:3.7183867527189776s; --delay:-3.042838336385369s;"></div>
+            <div class="bubble" style="--size:2.026746450412105rem; --distance:6.502691099200819rem; --position:85.62313611805486%; --time:3.494317365396361s; --delay:-3.4833275829434474s;"></div>
+            <div class="bubble" style="--size:3.054638031690696rem; --distance:9.630906624269421rem; --position:49.28171892767605%; --time:2.078732874387835s; --delay:-2.8560116531664974s;"></div>
+            <div class="bubble" style="--size:2.012261106246572rem; --distance:6.350292912118125rem; --position:23.849452345192734%; --time:2.00461324106357s; --delay:-3.20955034475802s;"></div>
+            <div class="bubble" style="--size:4.452074063324405rem; --distance:6.547936208223239rem; --position:73.82189037003714%; --time:2.2395523886958717s; --delay:-3.5137809292456126s;"></div>
+            <div class="bubble" style="--size:3.4659783890878444rem; --distance:7.9007038580342055rem; --position:61.77002216623302%; --time:2.7855883895504827s; --delay:-3.5514665185346517s;"></div>
+            <div class="bubble" style="--size:2.8359702072959125rem; --distance:6.76846921857297rem; --position:94.76951303825287%; --time:2.749092001402991s; --delay:-3.7142170608712677s;"></div>
+            <div class="bubble" style="--size:5.979390371877324rem; --distance:7.056255054402699rem; --position:85.4210839085599%; --time:3.3810897182605486s; --delay:-3.452912296465091s;"></div>
+            <div class="bubble" style="--size:2.1473498350287983rem; --distance:9.389094547263912rem; --position:48.88216308436826%; --time:3.6743579989484045s; --delay:-2.044667883312844s;"></div>
+            <div class="bubble" style="--size:3.1936934581308787rem; --distance:8.118636992332966rem; --position:84.89136594484648%; --time:3.4764098919651913s; --delay:-2.9493236730708787s;"></div>
+            <div class="bubble" style="--size:4.807893497501359rem; --distance:7.003832120516417rem; --position:28.333232603459095%; --time:2.8036845731065863s; --delay:-2.400553725693415s;"></div>
+            <div class="bubble" style="--size:2.1838189928812595rem; --distance:8.74614982171715rem; --position:49.83890466394799%; --time:3.831023270491624s; --delay:-2.3247484531600047s;"></div>
+            <div class="bubble" style="--size:3.9694222170274314rem; --distance:7.112871677871054rem; --position:-3.991762932421503%; --time:3.8041509721068056s; --delay:-3.2490967468650016s;"></div>
+            <div class="bubble" style="--size:4.346528498701127rem; --distance:7.107564596791731rem; --position:15.991704021278132%; --time:3.5456766373269937s; --delay:-2.7455071606036547s;"></div>
+            <div class="bubble" style="--size:4.970437595035696rem; --distance:7.1692617752287005rem; --position:19.922960860962768%; --time:3.454838464900934s; --delay:-2.9339461249302845s;"></div>
+            <div class="bubble" style="--size:4.190569522801588rem; --distance:8.382848924441655rem; --position:91.85610002304432%; --time:3.6269573556335097s; --delay:-3.174274847223172s;"></div>
+            <div class="bubble" style="--size:5.560678314275846rem; --distance:8.310745191407506rem; --position:-2.2407387635268283%; --time:3.6963215588241307s; --delay:-2.8477110153012077s;"></div>
+            <div class="bubble" style="--size:2.3433054242714rem; --distance:7.163769873593075rem; --position:23.05013218168334%; --time:2.722633204669559s; --delay:-2.3056164329409854s;"></div>
+            <div class="bubble" style="--size:3.289835531132473rem; --distance:7.173114893075322rem; --position:71.04195031873785%; --time:2.4755587048834893s; --delay:-2.4457749623400624s;"></div>
+            <div class="bubble" style="--size:3.3747765164328207rem; --distance:8.394447311394096rem; --position:33.16214018879097%; --time:2.613862171295199s; --delay:-2.142317299222569s;"></div>
+            <div class="bubble" style="--size:4.7587999928836835rem; --distance:6.076057744162707rem; --position:3.8273273803587884%; --time:3.546920260721827s; --delay:-3.358008264887948s;"></div>
+            <div class="bubble" style="--size:2.7950927488324204rem; --distance:6.202507771117523rem; --position:52.50223644779432%; --time:3.483013202392819s; --delay:-2.369015000041473s;"></div>
+            <div class="bubble" style="--size:5.5101549370350495rem; --distance:8.876669629526072rem; --position:70.49402667932904%; --time:3.5074760535439866s; --delay:-2.4858527942172577s;"></div>
+            <div class="bubble" style="--size:2.517987668298697rem; --distance:8.456111196706718rem; --position:57.85126329022943%; --time:3.608167810115316s; --delay:-2.9986415648329396s;"></div>
+            <div class="bubble" style="--size:2.3490117273568547rem; --distance:9.046253523677827rem; --position:90.02155239975812%; --time:2.2073281206333633s; --delay:-3.7549731808144067s;"></div>
+            <div class="bubble" style="--size:4.706039113957097rem; --distance:6.946570607091038rem; --position:49.48074971274123%; --time:2.099836661107198s; --delay:-2.6467650241860667s;"></div>
+            <div class="bubble" style="--size:2.768573014517729rem; --distance:7.768837963797844rem; --position:97.18514951354915%; --time:2.027838131544522s; --delay:-2.2102363090731396s;"></div>
+            <div class="bubble" style="--size:4.398260355025838rem; --distance:9.324230356756225rem; --position:14.49931760070914%; --time:2.575749561260463s; --delay:-2.9788613557761026s;"></div>
+            <div class="bubble" style="--size:5.743235519914734rem; --distance:8.318874848440966rem; --position:-2.62164541109424%; --time:2.1142355496977703s; --delay:-3.760303000243334s;"></div>
+            <div class="bubble" style="--size:2.843823361789717rem; --distance:9.488780513587182rem; --position:10.129854322775662%; --time:3.030906080773964s; --delay:-3.2201783275305087s;"></div>
+            <div class="bubble" style="--size:2.8605017242105575rem; --distance:6.732774030134603rem; --position:63.66478666210355%; --time:2.233202659968998s; --delay:-3.4888165677488563s;"></div>
+            <div class="bubble" style="--size:2.7437598944056187rem; --distance:9.86692399988305rem; --position:93.9556317283002%; --time:2.560732906843538s; --delay:-3.365894108565702s;"></div>
+            <div class="bubble" style="--size:3.513392705067389rem; --distance:9.25773721642554rem; --position:97.83817478465615%; --time:3.2596029219794556s; --delay:-3.4561796122458346s;"></div>
+            <div class="bubble" style="--size:5.24890462437716rem; --distance:9.047202927173196rem; --position:-1.6449803364800042%; --time:3.584702743320733s; --delay:-2.9307421988187308s;"></div>
+            <div class="bubble" style="--size:2.1541436690033287rem; --distance:8.966057664104905rem; --position:14.33468648408516%; --time:2.5112881216811265s; --delay:-3.0278918576637124s;"></div>
+            <div class="bubble" style="--size:4.163355485682522rem; --distance:9.329150611457127rem; --position:94.5447348843888%; --time:3.2449721525230606s; --delay:-3.1043143176206285s;"></div>
+            <div class="bubble" style="--size:4.8769224474554775rem; --distance:6.191320049546228rem; --position:67.64334947328446%; --time:2.6613430842687804s; --delay:-2.7421957577218783s;"></div>
+            <div class="bubble" style="--size:2.2734098934538256rem; --distance:7.076762219121586rem; --position:19.574306808279076%; --time:2.590219071444867s; --delay:-2.634307179179412s;"></div>
+            <div class="bubble" style="--size:5.067225871504628rem; --distance:9.593374461896177rem; --position:14.12341543152393%; --time:2.6525386823295416s; --delay:-2.7740600370574455s;"></div>
+            <div class="bubble" style="--size:4.056176042260581rem; --distance:6.158588846520755rem; --position:4.479962422646825%; --time:2.005952385176652s; --delay:-2.404652391587151s;"></div>
+            <div class="bubble" style="--size:4.752733951699866rem; --distance:7.670834975388779rem; --position:46.28476197629697%; --time:2.5989287655022353s; --delay:-2.7696610330291467s;"></div>
+            <div class="bubble" style="--size:3.4423706277896704rem; --distance:7.272453992892735rem; --position:53.2942211066984%; --time:3.3745545085559523s; --delay:-2.891701067305168s;"></div>
+            <div class="bubble" style="--size:3.482959991747398rem; --distance:8.799234211307606rem; --position:1.4038869867815906%; --time:3.227915338660671s; --delay:-2.132271675891253s;"></div>
+            <div class="bubble" style="--size:5.807921645163597rem; --distance:8.310233802535228rem; --position:73.44812660010332%; --time:3.3473059025118177s; --delay:-3.5484940678013905s;"></div>
+            <div class="bubble" style="--size:3.898482836324649rem; --distance:9.11412738444189rem; --position:0.8319732039718719%; --time:3.3805266566712935s; --delay:-2.790677033434642s;"></div>
+            <div class="bubble" style="--size:4.1245075808145435rem; --distance:7.525977856326088rem; --position:78.88814640856191%; --time:2.595833762397915s; --delay:-2.0848394684837386s;"></div>
+            <div class="bubble" style="--size:4.934893603066779rem; --distance:9.970142035045477rem; --position:48.54541476383926%; --time:2.391332790826209s; --delay:-3.4798695928408523s;"></div>
+            <div class="bubble" style="--size:5.64418430301509rem; --distance:8.832363547897984rem; --position:84.56851603708714%; --time:2.412687139487031s; --delay:-2.6648351417116842s;"></div>
+            <div class="bubble" style="--size:5.01620704076795rem; --distance:6.638375633947117rem; --position:17.232523424486704%; --time:2.5218559146551307s; --delay:-3.5569264201656488s;"></div>
+            <div class="bubble" style="--size:5.1492077336419495rem; --distance:8.292793565378066rem; --position:78.49570583158047%; --time:2.3372510632297394s; --delay:-2.7588247138607525s;"></div>
+            <div class="bubble" style="--size:4.577776400258163rem; --distance:9.049479020655156rem; --position:25.3980844456023%; --time:2.955639362124819s; --delay:-3.595558152388125s;"></div>
+            <div class="bubble" style="--size:3.4824332753862786rem; --distance:9.529618477900772rem; --position:72.44955954841662%; --time:2.886792455188903s; --delay:-3.7044706638593343s;"></div>
+            <div class="bubble" style="--size:3.246388860825003rem; --distance:6.859783476089158rem; --position:11.012905858343757%; --time:3.107029586978341s; --delay:-2.5676905814228532s;"></div>
+            <div class="bubble" style="--size:3.6314051997734174rem; --distance:9.766870412674145rem; --position:56.41085268703999%; --time:2.587094594589107s; --delay:-2.82092396622093s;"></div>
+            <div class="bubble" style="--size:2.26138601181078rem; --distance:7.697651902278658rem; --position:57.34146855487172%; --time:2.8818930511556013s; --delay:-2.2267656297877045s;"></div>
+            <div class="bubble" style="--size:2.146752067864692rem; --distance:7.0356785471831715rem; --position:85.35554623865639%; --time:2.1726189351187624s; --delay:-3.181370336006112s;"></div>
+            <div class="bubble" style="--size:3.9916419952063356rem; --distance:6.538832564346334rem; --position:92.12308363414746%; --time:2.215526300239758s; --delay:-3.394625487047849s;"></div>
+            <div class="bubble" style="--size:2.318477029831768rem; --distance:6.428695078103088rem; --position:63.21944149135723%; --time:2.3585943358864934s; --delay:-2.108616052904673s;"></div>
+            <div class="bubble" style="--size:3.23986503360109rem; --distance:9.380411913431825rem; --position:10.417775836098361%; --time:2.6872266943627894s; --delay:-3.6961275758663623s;"></div>
+            <div class="bubble" style="--size:5.735696498249112rem; --distance:9.121227237957306rem; --position:23.632118194669275%; --time:2.3563000345427376s; --delay:-2.743220612496521s;"></div>
+            <div class="bubble" style="--size:5.4909656901228665rem; --distance:6.616844011821694rem; --position:20.55180835261902%; --time:2.5102671062248088s; --delay:-3.1249842549164812s;"></div>
+            <div class="bubble" style="--size:2.4376381983543496rem; --distance:8.786651674002824rem; --position:6.261655990074988%; --time:3.431620627012096s; --delay:-2.6648025438855147s;"></div>
+            <div class="bubble" style="--size:5.584052576261705rem; --distance:8.508155854395962rem; --position:1.9195100009355155%; --time:2.871089666967712s; --delay:-3.5021833769385147s;"></div>
+            <div class="bubble" style="--size:3.0329074508274143rem; --distance:9.352593579882784rem; --position:56.67734294811513%; --time:3.8855530745515465s; --delay:-3.0434962795305283s;"></div>
+            <div class="bubble" style="--size:5.170582171780086rem; --distance:7.056337857391265rem; --position:36.20106008056809%; --time:3.0952323826832173s; --delay:-3.688771020604851s;"></div>
+            <div class="bubble" style="--size:5.875466190502161rem; --distance:9.940036706681749rem; --position:89.46670606565219%; --time:3.1228078978901492s; --delay:-3.7728473456123135s;"></div>
+            <div class="bubble" style="--size:5.0816090859999rem; --distance:7.962720562300811rem; --position:44.63863340415162%; --time:2.635311453869129s; --delay:-3.3170849180388196s;"></div>
+            <div class="bubble" style="--size:2.0370411790882645rem; --distance:7.7783936766916835rem; --position:53.17201319260539%; --time:3.4162953533002796s; --delay:-3.445979248023736s;"></div>
+            <div class="bubble" style="--size:2.3014302832768765rem; --distance:8.896362845112419rem; --position:92.5818359979613%; --time:3.1181637843570957s; --delay:-2.4958489718311934s;"></div>
+            <div class="bubble" style="--size:4.395083980877228rem; --distance:9.462260953463819rem; --position:48.36066537758681%; --time:3.5227678747055577s; --delay:-2.0648893625886235s;"></div>
+            <div class="bubble" style="--size:3.78486572321792rem; --distance:9.772031089507383rem; --position:68.61886706348413%; --time:2.9687779305858473s; --delay:-2.5257269331461387s;"></div>
+            <div class="bubble" style="--size:3.8628126540252836rem; --distance:6.585361035582642rem; --position:5.699193725567778%; --time:2.6296831192795285s; --delay:-2.978540946961943s;"></div>
+            <div class="bubble" style="--size:3.510916854105143rem; --distance:8.118230153596048rem; --position:50.19621543937297%; --time:3.157117027766063s; --delay:-3.179045083475884s;"></div>
+            <div class="bubble" style="--size:5.836682780607093rem; --distance:6.0884058006233674rem; --position:79.49167613027299%; --time:3.398813080558621s; --delay:-3.156082833998788s;"></div>
+            <div class="bubble" style="--size:4.887861535217844rem; --distance:6.999613323842rem; --position:74.63887296308305%; --time:2.334758442331128s; --delay:-2.531250677589771s;"></div>
+            <div class="bubble" style="--size:2.5084477929851534rem; --distance:8.700210467638524rem; --position:26.793856015674145%; --time:2.898395202882564s; --delay:-3.845449409648105s;"></div>
+            <div class="bubble" style="--size:5.362335342870133rem; --distance:9.550774023350279rem; --position:-3.0963145746741705%; --time:2.382457933992069s; --delay:-2.874990786796491s;"></div>
+            <div class="bubble" style="--size:4.760303943673914rem; --distance:7.027353105303854rem; --position:15.445599057227046%; --time:2.561309614735193s; --delay:-2.708133506507831s;"></div>
+            <div class="bubble" style="--size:3.276165151622024rem; --distance:9.512630901811313rem; --position:91.74043591363822%; --time:3.4735202040202138s; --delay:-3.2841849133772247s;"></div>
+            <div class="bubble" style="--size:2.3929095302666736rem; --distance:7.692420395247803rem; --position:10.962813438806611%; --time:3.159105506883663s; --delay:-3.9625130391512338s;"></div>
+            <div class="bubble" style="--size:3.4166475343835367rem; --distance:7.3187579922318315rem; --position:94.99806750130129%; --time:3.713388777860199s; --delay:-3.109867988130357s;"></div>
+            <div class="bubble" style="--size:3.338101304242074rem; --distance:9.632410416358677rem; --position:32.31061112896375%; --time:3.9903958443629732s; --delay:-3.6950889685296247s;"></div>
+            <div class="bubble" style="--size:3.9100028798023327rem; --distance:7.762674246057216rem; --position:89.96279749774658%; --time:3.325114731050104s; --delay:-3.4089152224302133s;"></div>
+            <div class="bubble" style="--size:4.146401205250311rem; --distance:9.472866958550064rem; --position:82.01003523196394%; --time:2.7198622898211546s; --delay:-3.898105238272739s;"></div>
+            <div class="bubble" style="--size:3.026349990618167rem; --distance:8.138151756586264rem; --position:-4.06290681691055%; --time:3.152891182720888s; --delay:-3.6748040391832975s;"></div>
+            <div class="bubble" style="--size:4.3648990738777735rem; --distance:6.544391341173346rem; --position:30.03240680527015%; --time:2.9266030842343684s; --delay:-3.1266273773799926s;"></div>
+            <div class="bubble" style="--size:5.466848007047485rem; --distance:9.183888685085286rem; --position:45.70466414832001%; --time:3.7109037407008993s; --delay:-3.046491899575501s;"></div>
+            <div class="bubble" style="--size:3.658551791974313rem; --distance:9.95236638774173rem; --position:38.71266419859074%; --time:2.5009052393334454s; --delay:-2.092873377979356s;"></div>
+            <div class="bubble" style="--size:3.284968424138416rem; --distance:6.71008703983962rem; --position:19.25329811743379%; --time:2.9300080258734362s; --delay:-2.198401531314449s;"></div>
+            <div class="bubble" style="--size:5.173506568107429rem; --distance:9.082000775731409rem; --position:72.07605735397404%; --time:2.996548661794126s; --delay:-2.5654448313232767s;"></div>
+            <div class="bubble" style="--size:3.5423504511951rem; --distance:8.968313975590263rem; --position:6.484171755753074%; --time:3.322907937776266s; --delay:-2.7214898911429026s;"></div>
+            <div class="bubble" style="--size:2.593005092810783rem; --distance:7.991242898356821rem; --position:13.01289195891291%; --time:2.5505800404426613s; --delay:-2.673402839924384s;"></div>
+            <div class="bubble" style="--size:2.0141220403315927rem; --distance:7.228463694995214rem; --position:89.88943970498916%; --time:3.1687581612053184s; --delay:-2.611842638915755s;"></div>
+            <div class="bubble" style="--size:5.503059022095428rem; --distance:9.79699581375052rem; --position:12.940020004626408%; --time:3.396406986273056s; --delay:-2.751768697594247s;"></div>
+            <div class="bubble" style="--size:3.1742053913667228rem; --distance:6.528604050715592rem; --position:56.91592964987457%; --time:2.0346355116078625s; --delay:-2.5209490638897836s;"></div>
+            <div class="bubble" style="--size:5.242392318817185rem; --distance:8.681207252124707rem; --position:72.36537091902869%; --time:2.8112705873927406s; --delay:-2.8106137999313856s;"></div>
+            <div class="bubble" style="--size:2.883457766140679rem; --distance:7.372232453156489rem; --position:57.62968056182724%; --time:2.2639276756497826s; --delay:-3.7673877050998015s;"></div>
+            <div class="bubble" style="--size:2.0202640346088616rem; --distance:6.477154727996133rem; --position:72.86186736244066%; --time:3.1979017731848844s; --delay:-2.067312275051583s;"></div>
+            <div class="bubble" style="--size:4.127907801234101rem; --distance:6.665265400209174rem; --position:33.33890891984291%; --time:2.9180457649366276s; --delay:-3.3921655700886006s;"></div>
+            <div class="bubble" style="--size:3.3104555987383693rem; --distance:9.291461086452005rem; --position:90.72808040578026%; --time:2.9026058911360924s; --delay:-3.0469265386945588s;"></div>
+            <div class="bubble" style="--size:2.4523672638081733rem; --distance:7.734547119476504rem; --position:54.5790800025672%; --time:3.550082240033968s; --delay:-3.9872287983184336s;"></div>
+            <div class="bubble" style="--size:3.8220788476207757rem; --distance:7.853157990343489rem; --position:58.85503467529293%; --time:3.434337218851018s; --delay:-3.4654230108175894s;"></div>
+            <div class="bubble" style="--size:3.801111935287147rem; --distance:8.05776228643359rem; --position:70.86531254077397%; --time:2.8900321152242316s; --delay:-2.8496855922335547s;"></div>
+            <div class="bubble" style="--size:3.9492108255016536rem; --distance:6.543159579381888rem; --position:66.42194827660661%; --time:2.26734820641628s; --delay:-3.133238573566453s;"></div>
+            <div class="bubble" style="--size:4.29222256229055rem; --distance:9.881856433686277rem; --position:31.268602243489184%; --time:3.2771492147642154s; --delay:-3.848257805694657s;"></div>
+            <div class="bubble" style="--size:2.4501916526769847rem; --distance:9.76562070965749rem; --position:84.85653952229872%; --time:3.7780901812709433s; --delay:-2.8183675653082814s;"></div>
+            <div class="bubble" style="--size:5.1383053129650875rem; --distance:9.98501986093091rem; --position:47.05794023582426%; --time:3.8016058753749187s; --delay:-3.952369422720346s;"></div>
+            <div class="bubble" style="--size:3.5187594859120788rem; --distance:6.5005901919030356rem; --position:53.813998309866506%; --time:3.603356694640673s; --delay:-3.139953095652745s;"></div>
+        </div>
+        <div class="content">
+            <div>
+                <div><b>Адреса доставки</b><a href="#">Kazpost #1</a><a href="#">Kazpost #2</a><a href="#">Kazpost #3</a><a href="#">Kazpost #4</a><a href="#">Kazpost #5</a></div>
+                <div><b>Контактная информация</b><a href="#">+7 777 777 77 77</a><a href="#">example@gmail.com</a><a href="#">Тех.Поддержка</a><a href="#">Работа в Bagashop</a></div>
+                <div><b>Готовые компьютеры</b><a href="#">На базе RTX 30</a><a href="#">На базе RTX 20</a><a href="#">На базе RTX 16</a><a href="#">На базе RTX 10</a><a href="#">На базе RTX AMD</a></div>
+                <div><b>Для клиентов</b><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a><a href="#">О компании</a><a href="#">Гарантия лучшей цены</a></div>
+            </div>
+            <div><a class="image"><img src="./../images/heart.png" height="60px" width="60px" alt=""></a>
+                <p>Все права защищены <br> Bagashop.com ©2022</p>
+            </div>
+        </div>
+    </div>
+    <svg style="position:fixed; top:100vh">
+        <defs>
+            <filter id="blob">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="blob"></feColorMatrix>
+                <feComposite in="SourceGraphic" in2="blob" operator="atop"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+</footer>
+
 </html>

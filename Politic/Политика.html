@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Политика Конфиденциальности</title>
-    <link rel="stylesheet" href="Политика.css">
+    <link rel="stylesheet" href="Политика.css" id="theme-link">
 </head>
 <body>
     <ul class="main-menu">
@@ -50,8 +50,25 @@
             </ul>
         </li>
         <li class="polit"><a href="Политика.html">Политика конфиденциальности</a></li> 
-        <li class="cabinet"><a href="./../Cabinet/Вход.html">Личный Кабинет</a></li> 
-        <li id="mobile"><a href="./../Mobile/Mobile.html"><img src="https://cdn-icons-png.flaticon.com/512/35/35406.png" alt="" height="40px" width="40px"></a></li> 
+        <li class="cabinet"><a href="./../Cabinet/Вход.html">Личный Кабинет</a></li>
+        <li class="cabinet" onclick="openForm()"><a href="#">Личный Кабинет</a></li>
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h2 class="form-h2">Войти</h2>
+
+                <label for="email"><b>Почта</b></label>
+                <input type="text" placeholder="Введите Почту" name="email" required>
+
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введите Пароль" name="psw" required>
+
+                <button type="submit" class="btn-submit">Войти</button>
+                <button type="submit" class="buttons btn-reg" id="show-modal">Регистрация</button>
+                <button type="submit" class="buttons btn-cancel" onclick="closeForm()">Закрыть</button>
+            </form>
+        </div>
+        <li id="mobile"><a href="./../Mobile/Mobile.html"><img src="https://cdn-icons-png.flaticon.com/512/35/35406.png" alt="" height="40px" width="40px"></a></li>
+        <li class="theme-button" id="theme-button"><a href="#"><img class="img1" src="./../images/moon.png" alt="" height="20px" width="20px" onclick=imgchange(this,"./../images/moon.png","./../images/sun.png")></a></li>
     </ul>
     <hr>
     <h2 class="zagl"><strong>Политика конфиденциальности онлайн магазина bagashop.com</strong></h2>
@@ -82,6 +99,7 @@
     <h5 class="konec"> <em>Желаем вам притяного пользвания сайтом bagashop.com</em></h5>
     <h6 class="konec1"><em>С уважением, администрация сайта bagashop.com </em></h6>
     <a class="back">↑</a>
+
 	<script src="Политика.js"></script>
 </body>
 </html>

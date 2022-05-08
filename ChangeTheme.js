@@ -2,24 +2,22 @@ window.onload = function(){
     var modal = document.getElementById('myModal')
     var btn = document.getElementById("show-modal");
     var span = document.getElementsByClassName("close")[0];
-    
-    
+
     btn.onclick = function() {
         modal.style.display = "block";
     }
-    
-    
+
     span.onclick = function() {
         modal.style.display = "none";
     }
-    
-    
+
     window.onclick = function(event) {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
     }
 }
+
 let btn = document.getElementById("theme-button");
 let link = document.getElementById("theme-link");
 
@@ -44,8 +42,9 @@ function ChangeTheme() {
     link.setAttribute("href", currTheme);
 }
 
-var x=false
-function imgchange (obj,imgX,imgY) {
+
+function imgchange (obj, imgX, imgY) {
+    let x = false
     if (x) {
         obj.src = imgX
     }
@@ -63,6 +62,7 @@ function openForm() {
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
+
 
 (function() {
 

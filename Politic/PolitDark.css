@@ -1,11 +1,13 @@
 body {
-    max-width: 100%;
+    background-color: #373737;
+    color: #f4f4f4;
 }
 
 .main-menu {
     list-style: none;
     font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
-    margin: 30px 0 0;
+    margin: 0; /*отсуп со всех сторон */
+    margin-top: 30px; /* Доп. отсуп сверху */
 }
 
 .main-menu > li {
@@ -17,7 +19,7 @@ body {
 }
 
 .main-menu > li > a {
-    color: #000; /* Цвет текста */
+    color: #fff; /* Цвет текста */
     position: relative; /* Cдвигает элемент относительно его обычного положения */
     padding: 0 0 20px 0; /* Внутренние оступы, сделал отсуп снизу, что бы линия была под блоком */
     text-transform: uppercase;  /* Капс в li менюшках */
@@ -28,7 +30,7 @@ body {
 }
 
 .main-menu > li > a:hover {
-    text-decoration: none;   
+    text-decoration: none;
     color: #337AB7; /* Цвет при наведении */
 }
 
@@ -53,7 +55,7 @@ body {
 
 .main-menu li {
     margin: 0;
-    white-space: normal; /* Осталвяем текст на одной линии */
+    white-space: nowrap; /* Осталвяем текст на одной линии */
 }
 
 .main-menu li.menu-vidvigi {
@@ -83,7 +85,7 @@ body {
     transform: rotate(180deg); /* Делаем так, что бы стрелочки смотрели вправо */
 }
 
-.main-menu li.menu-vidvigi:hover > ul { /* Делам меню выдвига видимой */ 
+.main-menu li.menu-vidvigi:hover > ul { /* Делам меню выдвига видимой */
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -95,7 +97,7 @@ body {
     list-style: none;
     background-color: #337AB7;
     position: absolute;
-    z-index: 20; /* Ставим один слой на второй */ 
+    z-index: 20; /* Ставим один слой на второй */
     min-width: 220px;
     top: 100%;
     left: -30px;
@@ -120,13 +122,13 @@ body {
     color: #fff;
     padding: 10px;
     transition: all .3s;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 .main-menu ul li a:hover { /* Делаем фон блока меню выдвига белым, на которое наводимся */
     color: #337AB7;
     background: #FFF;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
 .main-menu ul ul { /* Размещаем второстепенное меню выдвига (второй выдвиг) */
@@ -183,8 +185,8 @@ body {
     max-height: 295px;
     max-width: 200px;
     padding: 10px;
-    background-color: #373737;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
 }
 
 /* Поля ввода полной ширины */
@@ -193,7 +195,7 @@ body {
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background: #f1f1f1;
+    background: #ddd;
     border-radius: 5px;
 }
 
@@ -301,28 +303,28 @@ body {
     cursor: pointer;
     border-radius: 2px;
     display: none;
-  }
-  
-  .back:hover {
+}
+
+.back:hover {
     background: #e9ebec;
     color: #000;
-  }
-  
-  .back-show {
+}
+
+.back-show {
     display: block;
     animation: trackScroll 0.7s linear forwards;
 }
 
-  h3, h4 {
-      margin-right: 200px;
-      margin-left: 200px;
-  }
+h3, h4 {
+    margin-right: 200px;
+    margin-left: 200px;
+}
 
 @keyframes trackScroll {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
