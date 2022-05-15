@@ -1,7 +1,7 @@
 body {
     max-width: 100%;
     height: 100vh;
-    background: #373737;
+    background-color: #373737;
     color: #f4f4f4;
     display: grid;
     grid-template-rows: 1fr auto;
@@ -14,8 +14,7 @@ body {
 .main-menu {
     list-style: none;
     font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
-    margin: 0; /*отсуп со всех сторон */
-    margin-top: 30px; /* Доп. отсуп сверху */
+    margin: 30px 0 0;
 }
 
 .main-menu > li {
@@ -34,7 +33,7 @@ body {
     font-size: 15px; /* Размер, итак понятно :> */
     font-weight: bold; /* Жирный текст */
     letter-spacing: 0.2px; /* Интервалы между буквами */
-    text-decoration: none;  /* Я так мучался что бы убрать гребанные подчеркивания черные */
+    text-decoration: none;
 }
 
 .main-menu > li > a:hover {
@@ -51,7 +50,7 @@ body {
     width: 0;
     height: 3px;
     left: 0;
-    bottom: 10px;
+    bottom: 11px;
 }
 
 .main-menu > li > a:hover::after {
@@ -64,7 +63,7 @@ body {
 
 .main-menu li {
     margin: 0;
-    white-space: nowrap; /* Осталвяем текст на одной линии */
+    white-space: normal; /* Осталвяем текст на одной линии */
 }
 
 .main-menu li.menu-vidvigi {
@@ -86,7 +85,7 @@ body {
 .main-menu li li.menu-vidvigi:after { /* Здесь создаем стрелочки уже в самих выдвигах */
     content: "\2039";
     position: absolute;
-    color: #FFF;
+    color: #fff;
     font-size: 20px;
     font-weight: bold;
     right: 10px;
@@ -174,7 +173,7 @@ body {
     max-height: 317px;
     max-width: 200px;
     padding: 10px;
-    background-color: #373737;
+    background-color: #fff;
 }
 
 /* Поля ввода полной ширины */
@@ -223,7 +222,6 @@ body {
     margin-top: -5px;
     margin-bottom: 10px;
     opacity: 1;
-
 }
 
 /* Добавить красный цвет фона для кнопки "Отмена" */
@@ -241,116 +239,14 @@ body {
 }
 
 /* Добавить некоторые эффекты наведения на кнопки */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn-submit:hover, .btn-reg:hover, .btn-cancel:hover {
     opacity: 0.8;
 }
 
+
+
 /* Код Миарса  */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-body {
-    margin : 0 ;
-    padding : 0 ;
-    transition: all .3s;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    display :flex;
-    justify-content:space-evenly;
-    flex-wrap:wrap;
-}
-
-.card {
-    margin: auto;
-    width: 350px;
-    overflow: hidden;
-    border-radius: 20px;
-    background: #000;
-    margin-top:50px;
-    transition: all .2s;
-    box-shadow:5px 5px 15px rgba(0,0,0, .3);
-}
-
-.card:hover {
-    box-shadow: 5px 5px 25px rgba(0,0,0, .5);
-    transform: translate(-5px, -5px);
-}
-
-.card:hover .icon svg{
-    animation : iconjln 1s;
-}
-
-.img-cover{
-    position: relative;
-}
-
-.card img{
-    width: 350px;
-    height:350px;
-    object-fit:cover;
-}
-
-.icon {
-    position: absolute;
-    top:0;
-    padding: 25px;
-    right:0;
-    border-bottom-left-radius:20px;
-    backdrop-filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-}
-
-.desc{
-    padding : 1.5em ;
-    font-family: 'Poppins', sans-serif;
-}
-.desc h1{
-    display:inline;
-}
-.tdesc{
-    margin-bottom:40px;
-    width:100%;
-    height:50px;
-    overflow: auto;
-}
-
-.desc a{
-    text-decoration: none;
-    background-color: dodgerblue;
-    padding: 15px 25px;
-    color:white;
-    border-radius: 15px;
-    display:block;
-    text-align: center;
-    transition: all .2s;
-}
-.desc a:hover{
-    background-color: SteelBlue;
-}
-.desc a:hover svg{
-    animation : iconjln 1s;
-}
-
-@keyframes iconjln {
-    0%, 100% {
-        opacity : 1;
-        transform: translateX(0%);
-    }
-
-    50% {
-        opacity:0;
-        transform: translateX(100%);
-    }
-
-    70% {
-        opacity:0;
-        transform:translateX(-100%);
-    }
-}
 
 .rec {
     margin-top: 30px;
@@ -555,7 +451,7 @@ body {
     z-index: 5;
     position: absolute;
     right: 0;
-    bottom: 0;
+    top: 0;
 }
 .fnc-nav__bgs {
     z-index: -1;
@@ -930,7 +826,7 @@ body {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: relative; /* Location of the box */
+    padding-top: inherit; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -940,9 +836,10 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+
 .modal-content {
     position: relative;
-    background-color: #373737;
+    background-color: #fff;
     margin: auto;
     padding: 0;
     border: 5px solid #000;
@@ -995,8 +892,8 @@ body {
     padding: 2px 16px;
     text-align: center;
     border: 1px solid #000;
-    background-color: #373737;
-    color: #fff;
+    background-color: white;
+    color: black;
 }
 
 input {
@@ -1010,9 +907,9 @@ input {
 }
 
 .modal-body h1 {
-    background-color: #373737;
+    background-color: #fff;
     border-radius: 5px 5px;
-    color: #fff;
+    color: #000;
     font-size: 14px;
     padding: 20px;
     text-align: center;
@@ -1023,7 +920,7 @@ input {
     padding: 12px 10px;
     width: 325px;
     border-radius: 5px;
-    background: #fff;
+    background: #f1f1f1;
 }
 
 .REG {
@@ -1055,8 +952,6 @@ input {
     margin-bottom: 10px;
 }
 
-
-
 /* footer */
 
 body .footer {
@@ -1067,7 +962,6 @@ body .footer {
     grid-area: footer;
     min-height: 12rem;
 }
-
 body .footer .bubbles {
     position: absolute;
     top: 0;
@@ -1077,7 +971,6 @@ body .footer .bubbles {
     background: #337AB7;
     filter: url("#blob");
 }
-
 body .footer .bubbles .bubble {
     position: absolute;
     left: var(--position, 50%);
@@ -1086,7 +979,6 @@ body .footer .bubbles .bubble {
     animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
     transform: translate(-50%, 100%);
 }
-
 body .footer .content {
     z-index: 2;
     display: grid;
@@ -1095,36 +987,29 @@ body .footer .content {
     padding: 2rem;
     background: var(--footer-background);
 }
-
 body .footer .content a, body .footer .content p {
     color: #f5f7fa;
     text-decoration: none;
     margin-left: 10px;
 }
-
 body .footer .content b {
     color: white;
 }
-
 body .footer .content p {
     margin: 0;
     font-size: 0.75rem;
 }
-
 body .footer .content > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 body .footer .content > div > div {
     margin: 0.25rem 0;
 }
-
 body .footer .content > div > div > * {
     margin-right: 0.5rem;
 }
-
 body .footer .content > div .image {
     align-self: center;
     width: 4rem;
@@ -1133,7 +1018,6 @@ body .footer .content > div .image {
     background-size: cover;
     background-position: center;
 }
-
 @keyframes bubble-size {
     0%, 75% {
         width: var(--size, 4rem);
@@ -1144,7 +1028,6 @@ body .footer .content > div .image {
         height: 0rem;
     }
 }
-
 @keyframes bubble-move {
     0% {
         bottom: -4rem;
@@ -1153,7 +1036,6 @@ body .footer .content > div .image {
         bottom: var(--distance, 10rem);
     }
 }
-
 
 
 /*Боковое меню*/
@@ -1424,8 +1306,6 @@ body {
 }
 
 
-/*Cкроллбар*/
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -1437,3 +1317,44 @@ body {
     background: #afafaf;
     border-radius: 20px;
 }
+
+
+
+/* Параллакс */
+
+.container {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    perspective: 3px;
+}
+
+.parralax {
+    background-size: cover;
+    color: white;
+    background-color: var(--bg, --color-black);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-image {
+    background-position: center center;
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: cover;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+    height: 100vh;
+}
+
+.parallax-text {
+    height: 50vh;
+}
+
+.parallax-heading {
+    z-index: -1;
+    transform: translateY(-500px) translateZ(1px) scale(1.5);
+}
+

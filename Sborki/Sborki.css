@@ -495,6 +495,9 @@ body .footer .content > div .image {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 150px;
 }
 
 .wrapper {
@@ -508,7 +511,6 @@ body .footer .content > div .image {
     transform: scale(0.95);
     transition: box-shadow 0.5s, transform 0.5s;
     margin: 40px 40px 0 40px;
-    top: -150px;
 }
 
 .wrapper:hover {
