@@ -1,7 +1,7 @@
 window.onload = function(){
-    var modal = document.getElementById('myModal')
-    var btn = document.getElementById("show-modal");
-    var span = document.getElementsByClassName("close")[0];
+    let modal = document.getElementById('myModal')
+    let btn = document.getElementById("show-modal");
+    let span = document.getElementsByClassName("close")[0];
 
     btn.onclick = function() {
         modal.style.display = "block";
@@ -43,16 +43,6 @@ function ChangeTheme() {
     link.setAttribute("href", currTheme);
 }
 
-var x = false
-function imgchange (obj,imgX,imgY) {
-    if (x) {
-        obj.src = imgX
-    }
-    else {
-        obj.src = imgY
-    }
-    x=!x
-}
 
 
 function openForm() {
