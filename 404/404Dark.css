@@ -1,0 +1,646 @@
+body {
+    max-width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    color: #f4f4f4;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "main" "footer";
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s;
+}
+
+.main-menu {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
+    margin: 30px 0 0;
+    padding-bottom: 10px;
+}
+
+.main-menu > li {
+    display: inline-flex; /* Все блоки li менюшки в одной строке  */
+}
+
+.main-menu > li + li {
+    margin-left: 20px; /* Пространство между блоками li меню */
+}
+
+.main-menu > li > a {
+    color: #fff; /* Цвет текста */
+    position: relative; /* Cдвигает элемент относительно его обычного положения */
+    padding: 0 0 20px 0; /* Внутренние оступы, сделал отсуп снизу, что бы линия была под блоком */
+    text-transform: uppercase;  /* Капс в li менюшках */
+    font-size: 15px; /* Размер, итак понятно :> */
+    font-weight: bold; /* Жирный текст */
+    letter-spacing: 0.2px; /* Интервалы между буквами */
+    text-decoration: none;
+}
+
+.main-menu > li > a:hover {
+    text-decoration: none;
+    color: #337AB7; /* Цвет при наведении */
+}
+
+/* Синяя линия под блоками меню */
+.main-menu > li > a:after {
+    content: ""; /* Без нее линии не будет :( */
+    position: absolute; /* Делает позицию линии не зависимой */
+    transition: all .3s; /* Появление синий полоски. all - для всех блоков. .3s - время появления */
+    background-color: #337AB7;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 11px;
+}
+
+.main-menu > li > a:hover::after {
+    width: 100%; /* Делаем появление полоски видимым именно при наведении */
+}
+
+.main-menu > li.active a:after {
+    width: 100%; /* После активации блока линия класса active будет гореть */
+}
+
+.main-menu li {
+    margin: 0;
+    white-space: normal; /* Осталвяем текст на одной линии */
+}
+
+.main-menu li.menu-vidvigi {
+    position: relative; /* Сдвигаем элемент на 12 пикселей относительно обычной позиции */
+    margin-right: 12px; /* Справа */
+}
+
+.main-menu li.menu-vidvigi:after {
+    content: "\2039"; /* Создание стрелочек */
+    position: absolute; /* Делаем стрелочки возле блоков, а не под ними */
+    color: #337AB7;
+    font-size: 20px;
+    font-weight: bold;
+    right: -12px;
+    top: -2px;
+    transform: rotate(-90deg); /* Делаем так, что бы стрелочки смотрели вниз */
+}
+
+.main-menu li li.menu-vidvigi:after { /* Здесь создаем стрелочки уже в самих выдвигах */
+    content: "\2039";
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    right: 10px;
+    top: 12px;
+    transform: rotate(180deg); /* Делаем так, что бы стрелочки смотрели вправо */
+}
+
+.main-menu li.menu-vidvigi:hover > ul { /* Делам меню выдвига видимой */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.main-menu ul { /* Соединяем блоки */
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    background-color: #337AB7;
+    position: absolute;
+    z-index: 20; /* Ставим один слой на второй */
+    min-width: 220px;
+    top: 100%;
+    left: -30px;
+    opacity: 0; /* Неррозрачность */
+    visibility: hidden; /* Делаем так что бы меню выдвига появлялось только при наведении на сам блок, а не на територию под ним */
+    transform: translateY(5px); /* Расстояние от блока меню, где будет появлятся меню выдвига */
+    transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25); /* Скорость появления меню выдвига */
+}
+
+.main-menu ul li {
+    display: block;
+    padding: 0 20px; /* Внутренная обвдока блоков меню выдвига */
+    line-height: 1.1;
+}
+
+.main-menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.main-menu ul li a { /* Дизайн самих блоков меню выдвига */
+    display: block;
+    color: #fff;
+    padding: 10px;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.main-menu ul li a:hover { /* Делаем фон блока меню выдвига белым, на которое наводимся */
+    color: #337AB7;
+    background: #FFF;
+    text-decoration: none;
+}
+
+.main-menu ul ul { /* Размещаем второстепенное меню выдвига (второй выдвиг) */
+    top: 0;
+    left: 100%;
+}
+
+.cabinet {
+    position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
+    right: 40px; /* Расположение блока */
+    top: 30px;
+}
+
+
+/*Боковое меню*/
+
+* {
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 320px;
+    min-width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    left: -320px;
+    padding: 15px 20px;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s;
+    background: #337AB7;
+    z-index: 2000;
+}
+
+.nav-toggle {
+    position: absolute;
+    left: 320px;
+    top: 1em;
+    padding: 0.5em;
+    background: inherit;
+    color: #dadada;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    z-index: 2001;
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+
+.nav-toggle:after {
+    content: '\2630';
+    text-decoration: none;
+}
+
+.nav-toggle:hover {
+    color: #f4f4f4;
+}
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+    left: auto;
+    right: 2px;
+    top: 1em;
+}
+
+[id='nav-toggle']:checked ~ .nav {
+    left: 0;
+    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+}
+
+[id='nav-toggle']:checked ~ main > article {
+    -webkit-transform: translateX(320px);
+    -moz-transform: translateX(320px);
+    transform: translateX(320px);
+}
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
+    content: '\2715';
+}
+
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+    to {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    html,
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html,
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .nav {
+        width: 100%;
+        box-shadow: none
+    }
+}
+
+.nav h2 {
+    width: 90%;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+    text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+    -ms-transform: scale(0.1, 0.1);
+    -moz-transform: scale(0.1, 0.1);
+    -webkit-transform: scale(0.1, 0.1);
+    transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    transition: opacity 0.8s, transform 0.8s;
+    -ms-transition: opacity 0.8s, -ms-transform 0.8s;
+    -moz-transition: opacity 0.8s, -moz-transform 0.8s;
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+}
+
+.nav h2 a {
+    color: #dadada;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+[id='nav-toggle']:checked ~ .nav h2 {
+    opacity: 1;
+    transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+}
+
+.nav > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav > ul > li {
+    line-height: 2.5;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
+    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
+    transition: opacity .5s .1s, transform .5s .1s;
+}
+
+[id='nav-toggle']:checked ~ .nav > ul > li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.nav > ul > li:nth-child(2) {
+    -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
+    transition: opacity .5s .2s, transform .5s .2s;
+}
+
+.nav > ul > li:nth-child(3) {
+    -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
+    transition: opacity .5s .3s, transform .5s .3s;
+}
+
+.nav > ul > li:nth-child(4) {
+    -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
+    transition: opacity .5s .4s, transform .5s .4s;
+}
+
+.nav > ul > li:nth-child(5) {
+    -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
+    transition: opacity .5s .5s, transform .5s .5s;
+}
+
+.nav > ul > li:nth-child(6) {
+    -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
+    transition: opacity .5s .6s, transform .5s .6s;
+}
+
+.nav > ul > li:nth-child(7) {
+    -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
+    transition: opacity .5s .7s, transform .5s .7s;
+}
+
+.nav > ul > li > a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #dadada;
+    width: 100%;
+    text-decoration: none;
+    /* плавный переход */
+    -webkit-transition: color .5s ease, padding .5s ease;
+    -moz-transition: color .5s ease, padding .5s ease;
+    transition: color .5s ease, padding .5s ease;
+}
+
+.main {
+    margin-left: 15px;
+}
+
+.nav > ul > li > a:hover,
+.nav > ul > li > a:focus {
+    color: white;
+    padding-left: 15px;
+}
+
+.nav > ul > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+.nav > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #4f9adb;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.nav > ul > li > a:hover:before {
+    width: 0%;
+    background: #7aacd8;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.nav > ul > li > a:hover:after {
+    width: 0%;
+    background: transparent;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+
+/* Футер */
+
+body .footer {
+    z-index: 1;
+    --footer-background: #337AB7;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: #337AB7;
+    filter: url("#blob");
+}
+body .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: #337AB7;
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+body .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-background);
+}
+body .footer .content a, body .footer .content p {
+    color: #f5f7fa;
+    text-decoration: none;
+    margin-left: 10px;
+}
+body .footer .content b {
+    color: white;
+}
+body .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+body .footer .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body .footer .content > div > div {
+    margin: 0.25rem 0;
+}
+body .footer .content > div > div > * {
+    margin-right: 0.5rem;
+}
+body .footer .content > div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+
+/* Скроллбар */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #337AB7;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #afafaf;
+    border-radius: 20px;
+}
+
+
+/* Игра */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 250px;
+    height: 50%;
+    cursor: pointer;
+    margin: 0;
+}
+
+#score {
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+#introduction {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: opacity 2s;
+}
+
+#restart {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    border: none;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
+    cursor: pointer;
+}
+
+#perfect {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+/* 404 */
+
+.content-404 {
+    background:url('/404.png') center no-repeat #262626;
+}
+
+.content404 {
+    height: 800px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 10%;
+    left: 0;
+}
+
+.ops {
+    font-size: 100px !important;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 50px !important;
+}
+
+.text-404 {
+    position: relative;
+    top: 300px;
+    left: 100px;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 20px;
+    color: #ababab;
+}
+
+.img-404 {
+    position: relative;
+    margin-top: -50px;
+    margin-left: 900px;
+    display: inline-block;
+}
+
+.content-a {
+    display: inline-block;
+    text-decoration: none
+}
+
+.content-a, .content-a:hover {
+    color: rgba(255,255,255,0.3);
+}
+
+.content-a:hover {
+    color: rgba(255,255,255,0.5);
+}
+
+@media only screen and (max-width: 460px), screen and (max-height: 700px) {
+    .content {
+        position:static;
+    }
+
+    .content-a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 0;
+        opacity: 0;
+    }
+}
