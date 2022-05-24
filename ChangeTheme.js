@@ -1,7 +1,7 @@
 window.onload = function(){
-    var modal = document.getElementById('myModal')
-    var btn = document.getElementById("show-modal");
-    var span = document.getElementsByClassName("close")[0];
+    let modal = document.getElementById('myModal')
+    let btn = document.getElementById("show-modal");
+    let span = document.getElementsByClassName("close")[0];
 
     btn.onclick = function() {
         modal.style.display = "block";
@@ -43,59 +43,39 @@ function ChangeTheme() {
 }
 
 
-function imgchange (obj, imgX, imgY) {
-    let x = false
-    if (x) {
-        obj.src = imgX
-    }
-    else {
-        obj.src = imgY
-    }
-    x=!x
-}
-
-
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-}
-
 
 (function() {
 
-    var $$ = function(selector, context) {
+    let $$ = function(selector, context) {
         var context = context || document;
-        var elements = context.querySelectorAll(selector);
+        let elements = context.querySelectorAll(selector);
         return [].slice.call(elements);
     };
 
     function _fncSliderInit($slider, options) {
-        var prefix = ".fnc-";
+        let prefix = ".fnc-";
 
         var $slider = $slider;
-        var $slidesCont = $slider.querySelector(prefix + "slider__slides");
-        var $slides = $$(prefix + "slide", $slider);
-        var $controls = $$(prefix + "nav__control", $slider);
-        var $controlsBgs = $$(prefix + "nav__bg", $slider);
-        var $progressAS = $$(prefix + "nav__control-progress", $slider);
+        let $slidesCont = $slider.querySelector(prefix + "slider__slides");
+        let $slides = $$(prefix + "slide", $slider);
+        let $controls = $$(prefix + "nav__control", $slider);
+        let $controlsBgs = $$(prefix + "nav__bg", $slider);
+        let $progressAS = $$(prefix + "nav__control-progress", $slider);
 
-        var numOfSlides = $slides.length;
-        var curSlide = 1;
-        var sliding = false;
-        var slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
-        var slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
+        let numOfSlides = $slides.length;
+        let curSlide = 1;
+        let sliding = false;
+        let slidingAT = +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
+        let slidingDelay = +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
 
-        var autoSlidingActive = false;
-        var autoSlidingTO;
-        var autoSlidingDelay = 5000; // default autosliding delay value
-        var autoSlidingBlocked = false;
+        let autoSlidingActive = false;
+        let autoSlidingTO;
+        let autoSlidingDelay = 5000; // default autosliding delay value
+        let autoSlidingBlocked = false;
 
-        var $activeSlide;
-        var $activeControlsBg;
-        var $prevControl;
+        let $activeSlide;
+        let $activeControlsBg;
+        let $prevControl;
 
         function setIDs() {
             $slides.forEach(function($slide, index) {
@@ -110,7 +90,7 @@ function closeForm() {
             $controlsBgs.forEach(function($bg, index) {
                 $bg.classList.add("fnc-nav__bg-" + (index + 1));
             });
-        };
+        }
 
         setIDs();
 
@@ -122,16 +102,16 @@ function closeForm() {
             $activeControlsBg.classList.remove("m--nav-bg-before");
             $prevControl.classList.remove("m--prev-control");
             $prevControl.classList.add("m--reset-progress");
-            var triggerLayout = $prevControl.offsetTop;
+            let triggerLayout = $prevControl.offsetTop;
             $prevControl.classList.remove("m--reset-progress");
 
             sliding = false;
-            var layoutTrigger = $slider.offsetTop;
+            let layoutTrigger = $slider.offsetTop;
 
             if (autoSlidingActive && !autoSlidingBlocked) {
                 setAutoslidingTO();
             }
-        };
+        }
 
         function performSliding(slideID) {
             if (sliding) return;
@@ -153,13 +133,13 @@ function closeForm() {
             $activeSlide.classList.add("m--before-sliding");
             $activeControlsBg.classList.add("m--nav-bg-before");
 
-            var layoutTrigger = $activeSlide.offsetTop;
+            let layoutTrigger = $activeSlide.offsetTop;
 
             $activeSlide.classList.add("m--active-slide");
             $activeControlsBg.classList.add("m--active-nav-bg");
 
             setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
-        };
+        }
 
 
 
@@ -174,7 +154,7 @@ function closeForm() {
             var slideID = +this.getAttribute("data-slide");
 
             performSliding(slideID);
-        };
+        }
 
         $controls.forEach(function($control) {
             $control.addEventListener("click", controlClickHandler);
@@ -189,7 +169,7 @@ function closeForm() {
             autoSlidingTO = setTimeout(function() {
                 performSliding(curSlide);
             }, delay);
-        };
+        }
 
         if (options.autoSliding || +options.autoSlidingDelay > 0) {
             if (options.autoSliding === false) return;
@@ -210,27 +190,18 @@ function closeForm() {
 
         $slider.querySelector(".fnc-nav__control:first-child").classList.add("m--active-control");
 
-    };
+    }
 
-    var fncSlider = function(sliderSelector, options) {
+    window.fncSlider = function (sliderSelector, options) {
         var $sliders = $$(sliderSelector);
 
-        $sliders.forEach(function($slider) {
+        $sliders.forEach(function ($slider) {
             _fncSliderInit($slider, options);
         });
     };
-
-    window.fncSlider = fncSlider;
 }());
 
-/* not part of the slider scripts */
 
-/* Slider initialization
-options:
-autoSliding - boolean
-autoSlidingDelay - delay in ms. If audoSliding is on and no value provided, default value is 5000
-blockASafterClick - boolean. If user clicked any sliding control, autosliding won't start again
-*/
 fncSlider(".example-slider", {autoSlidingDelay: 4000});
 
 var $demoCont = document.querySelector(".demo-cont");
