@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--suppress ALL -->
 <html lang="Eng">
 <head>
     <meta charset="utf-8">
@@ -53,23 +54,8 @@
         </ul>
     </li>
 
-    <li class="cabinet" onclick="openForm()"><a href="#">Личный Кабинет</a></li>
+    <li class="cabinet"><a href="#">Личный Кабинет</a></li>
 
-    <div class="form-popup" id="myForm">
-        <form class="form-container">
-            <h2 class="form-h2">Войти</h2>
-
-            <label for="email"><b>Почта</b></label>
-            <input type="text" placeholder="Введите Почту" name="email" required>
-
-            <label for="psw"><b>Пароль</b></label>
-            <input type="password" placeholder="Введите Пароль" name="psw" required>
-
-            <button type="submit" class="btn-submit">Войти</button>
-            <button type="submit" class="buttons btn-reg" id="show-modal" onclick="closeForm()">Регистрация</button>
-            <button type="submit" class="buttons btn-cancel" onclick="closeForm()">Закрыть</button>
-        </form>
-    </div>
 </ul>
 <hr>
 
@@ -232,31 +218,31 @@
 
     <section class="parralax parallax-image" style="background-image: url(https://i.artfile.me/wallpaper/13-01-2020/1920x1080/kompyutery-monitory--noutbuki-rabochij-s-1493576.jpg)"></section>
     <section class="parralax parallax-heading">
-        <h1>So green!</h1>
+        <h1>Давно задумывался о покупке компьютера?</h1>
     </section>
     <section class="parralax parallax-text" style="--bg: #c8c8bc">
-        <h1>Armenian highlands</h1>
+        <h1>Но боишься обмана или же плохой сборки?</h1>
     </section>
     <section class="parralax parallax-image" style="background-image: url(https://i.imgur.com/lB3JFOY.png)"></section>
     <section class="parralax parallax-heading">
-        <h1>Hot! hot! hot!</h1>
+        <h1>С нами тебе нечего боятся</h1>
     </section>
     <section class="parralax parallax-text" style="--bg: #638a87">
-        <h1>Paradise on earth</h1>
+        <h1>У нас работают более 50-и профессионалов</h1>
     </section>
     <section class="parralax parallax-image" style="background-image: url(https://aerocool.io/wp-content/uploads/2020/09/Cronus-Small-BG-1920x1080-08.jpg)"></section>
     <section class="parralax parallax-heading">
-        <h1>In a galaxy...</h1>
+        <h1>Которые всегда вам ответят, всегда помогут</h1>
     </section>
     <section class="parralax parallax-text" style="--bg: #384558">
-        <h1>Far, far away...</h1>
+        <h1>И соберут вам лучший компьютер</h1>
     </section>
     <section class="parralax parallax-image" style="background-image: url(https://i.imgur.com/9Fck42h.jpg)"></section>
     <section class="parralax parallax-heading">
-        <h1>Suits..</h1>
+        <h1>Bagashop.com..</h1>
     </section>
     <section class="parralax parallax-text" style="--bg: #9dbdc4">
-        <h1>Up into the sky</h1>
+        <h1>Покупай у лучших..</h1>
     </section>
     <footer>
         <div class="footer">
@@ -413,53 +399,6 @@
         </svg>
     </footer>
 </div>
-
-
-
-<!--Модальное окно (регистрация)-->
-
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h1>Регистрация на сайте</h1>
-        </div>
-        <div class="modal-body">
-            <label for="Name"><br><b>Имя</b><br></label>
-            <input type="text" placeholder=" Ваше имя">
-
-            <label for="Surname"><br><b>Фамилия</b><br></label>
-            <input type="text" placeholder=" Ваша фамилия">
-
-            <label for="Email"><br><b>Почта</b></label><br>
-            <input type="text" placeholder=" example@gmail.com">
-
-            <label for="Phone"><br><b>Телефон</b></label><br>
-            <input type="text" placeholder=" Телефонный номер">
-
-            <label for="Password"><br><b>Введите пароль</b><br></label>
-            <input type="Password" placeholder="Введите пароль" id="password-input" name="password">
-
-            <label for="Password"><br><b>Повторите пароль</b><br></label>
-            <input type="Password" placeholder="Повторите пароль" id="password-input2" name="password">
-
-            <div class="error"></div>
-
-            <a href="#" class="password-control"></a>
-            <a href="#" class="password-control2"></a>
-
-            <p>При создании аккаунта вы соглашаетесь с нашей <a href="Politic/Политика.html">Политикой Конфиденциальности</a>.</p>
-            <center> <a href="./../index.html"><button type="submit" class="REG" id="submit"> Зарегистрироваться</button> </a> </center>
-        </div>
-        <br>
-        <div class="modal-footer">
-            <div class="signin">
-                <p> Уже имеете аккаунт? <a href="Cabinet/Вход.html">Войти</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 
 <script src="ChangeTheme.js"></script>
