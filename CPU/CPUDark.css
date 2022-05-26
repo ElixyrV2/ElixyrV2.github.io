@@ -1,0 +1,1007 @@
+body {
+    max-width: 100%;
+    height: 100vh;
+    background: #373737;
+    color: #f4f4f4;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "main" "footer";
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    transition: background 0.3s;
+}
+
+.main-menu {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
+    margin: 0; /*отсуп со всех сторон */
+    margin-top: 30px; /* Доп. отсуп сверху */
+}
+
+.main-menu > li {
+    display: inline-flex; /* Все блоки li менюшки в одной строке  */
+}
+
+.main-menu > li + li {
+    margin-left: 20px; /* Пространство между блоками li меню */
+}
+
+.main-menu > li > a {
+    color: #fff; /* Цвет текста */
+    position: relative; /* Cдвигает элемент относительно его обычного положения */
+    padding: 0 0 20px 0; /* Внутренние оступы, сделал отсуп снизу, что бы линия была под блоком */
+    text-transform: uppercase;  /* Капс в li менюшках */
+    font-size: 15px; /* Размер, итак понятно :> */
+    font-weight: bold; /* Жирный текст */
+    letter-spacing: 0.2px; /* Интервалы между буквами */
+    text-decoration: none;  /* Я так мучался что бы убрать гребанные подчеркивания черные */
+}
+
+.main-menu > li > a:hover {
+    text-decoration: none;
+    color: #337AB7; /* Цвет при наведении */
+}
+
+.main-menu > li > a:after { /* Синяя линия под блоками меню */
+    content: ""; /* Без нее линии не будет :( */
+    position: absolute; /* Делает позицию линии не зависимой */
+    transition: all .3s; /* Появление синий полоски. all - для всех блоков. .3s - время появления */
+    background-color: #337AB7;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: 10px;
+}
+
+.main-menu > li > a:hover::after {
+    width: 100%; /* Делаем появление полоски видимым именно при наведении */
+}
+
+.main-menu > li#compl a:after {
+    width: 100%; /* После активации блока линия класса active будет гореть */
+}
+
+.main-menu li {
+    margin: 0;
+    white-space: nowrap; /* Осталвяем текст на одной линии */
+}
+
+.main-menu li.menu-vidvigi {
+    position: relative; /* Сдвигаем элемент на 12 пикселей относительно обычной позиции */
+    margin-right: 12px; /* Справа */
+}
+
+.main-menu li.menu-vidvigi:after {
+    content: "\2039"; /* Создание стрелочек */
+    position: absolute; /* Делаем стрелочки возле блоков, а не под ними */
+    color: #337AB7;
+    font-size: 20px;
+    font-weight: bold;
+    right: -12px;
+    top: -2px;
+    transform: rotate(-90deg); /* Делаем так, что бы стрелочки смотрели вниз */
+}
+
+.main-menu li li.menu-vidvigi:after { /* Здесь создаем стрелочки уже в самих выдвигах */
+    content: "\2039";
+    position: absolute;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    right: 10px;
+    top: 12px;
+    transform: rotate(180deg); /* Делаем так, что бы стрелочки смотрели вправо */
+}
+
+.main-menu li.menu-vidvigi:hover > ul { /* Делам меню выдвига видимой */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.main-menu ul { /* Соединяем блоки */
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    background-color: #337AB7;
+    position: absolute;
+    z-index: 20; /* Ставим один слой на второй */
+    min-width: 220px;
+    top: 100%;
+    left: -30px;
+    opacity: 0; /* Неррозрачность */
+    visibility: hidden; /* Делаем так что бы меню выдвига появлялось только при наведении на сам блок, а не на територию под ним */
+    transform: translateY(5px); /* Расстояние от блока меню, где будет появлятся меню выдвига */
+    transition: all 300ms cubic-bezier(0.43, 0.59, 0.16, 1.25); /* Скорость появления меню выдвига */
+}
+
+.main-menu ul li {
+    display: block;
+    padding: 0 20px; /* Внутренная обвдока блоков меню выдвига */
+    line-height: 1.1;
+}
+
+.main-menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+.main-menu ul li a { /* Дизайн самих блоков меню выдвига */
+    display: block;
+    color: #fff;
+    padding: 10px;
+    transition: all .3s;
+    text-decoration: none;
+}
+
+.main-menu ul li a:hover { /* Делаем фон блока меню выдвига белым, на которое наводимся */
+    color: #337AB7;
+    background: #FFF;
+    text-decoration: none;
+}
+
+.main-menu ul ul { /* Размещаем второстепенное меню выдвига (второй выдвиг) */
+    top: 0;
+    left: 100%;
+}
+
+.cabinet {
+    position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
+    right: 40px; /* Расположение блока */
+    top: 30px;
+}
+
+/*Модальное окно*/
+
+/* Всплывающая форма-скрыта по умолчанию */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 9;
+    top: 80px;
+}
+
+.form-h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: -5px;
+    margin-bottom: 3px;
+}
+
+/* Добавить стили для контейнера формы */
+.form-container {
+    border-radius: 5px;
+    max-height: 31.5vh;
+    max-width: 200px;
+    padding: 10px;
+    background-color: #373737;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=text], .form-container input[type=password] {
+    width: 18vh;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Установите стиль для кнопки отправить/войти */
+.buttons {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.btn-submit {
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.btn-reg {
+    background-color: #337AB7;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 48.5%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    opacity: 1;
+
+}
+
+/* Добавить красный цвет фона для кнопки "Отмена" */
+.btn-cancel {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 48.5%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+/* Добавить некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 0.8;
+}
+
+
+#myBtn {
+    background-color: #9C27B0;
+    color: white;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    width: 180px;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: inherit; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #373737;
+    margin: auto;
+    padding: 0;
+    border: 5px solid #000;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    text-align: center;
+    background-color: #000;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: #373737;
+    color: #fff;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.modal-body h1 {
+    background-color: #373737;
+    border-radius: 5px 5px;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal-body input[type=text], input[type=Password] {
+    padding: 12px 10px;
+    width: 325px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.REG {
+    background-color: #337AB7;
+    border-radius: 5px;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 48.5%;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.REG:hover {
+    opacity: 0.8;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.signin {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+
+
+/* footer */
+
+body .footer {
+    z-index: 1;
+    --footer-background: #337AB7;
+    display: grid;
+    position: relative;
+    grid-area: footer;
+    min-height: 12rem;
+}
+
+body .footer .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: #337AB7;
+    filter: url("#blob");
+}
+
+body .footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%);
+    background: #337AB7;
+    border-radius: 100%;
+    animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
+    transform: translate(-50%, 100%);
+}
+
+body .footer .content {
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 4rem;
+    padding: 2rem;
+    background: var(--footer-background);
+}
+
+body .footer .content a, body .footer .content p {
+    color: #f5f7fa;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+body .footer .content b {
+    color: white;
+}
+
+body .footer .content p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+body .footer .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body .footer .content > div > div {
+    margin: 0.25rem 0;
+}
+
+body .footer .content > div > div > * {
+    margin-right: 0.5rem;
+}
+
+body .footer .content > div .image {
+    align-self: center;
+    width: 4rem;
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes bubble-size {
+    0%, 75% {
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
+    }
+    100% {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+@keyframes bubble-move {
+    0% {
+        bottom: -4rem;
+    }
+    100% {
+        bottom: var(--distance, 10rem);
+    }
+}
+
+
+/* Окошки  */
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 300px;
+    height: 500px;
+    font-family: Montserrat, sans-serif;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 10px 10px;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.3s;
+    margin: 40px 40px 0 40px;
+    top: -150px;
+}
+
+.wrapper:hover {
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+}
+.wrapper .container {
+    width: 100%;
+    height: 100%;
+}
+.wrapper .container .top {
+    height: 80%;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+.card-img {
+    height: inherit;
+    width: inherit;
+    margin-top: 40px;
+}
+
+.wrapper .container .bottom {
+    width: 200%;
+    height: 20%;
+    transition: transform 0.3s;
+}
+.wrapper .container .bottom.clicked {
+    transform: translateX(-50%);
+}
+.wrapper .container .bottom h1 {
+    margin: 0;
+    padding: 0;
+}
+.wrapper .container .bottom p {
+    margin: 0;
+    padding: 0;
+}
+.wrapper .container .bottom .left {
+    height: 100%;
+    width: 50%;
+    background: #373737;
+    position: relative;
+    float: left;
+}
+.wrapper .container .bottom .left .details {
+    padding: 20px;
+    float: left;
+    font-size: 11px;
+    width: calc(70% - 40px);
+}
+
+h1 {
+    font-size: 1.65vh;
+}
+
+.details-l-p {
+    font-size: 1.5vh;
+}
+
+.wrapper .container .bottom .left .buy {
+    float: right;
+    width: calc(30% - 2px);
+    height: 100%;
+    background: #373737;
+    transition: background 0.3s;
+    border-left: solid thin rgba(0, 0, 0, 0.1);
+}
+.wrapper .container .bottom .left .buy i {
+    font-size: 15px;
+    padding: 30px;
+    color: #337AB7;
+    transition: transform 0.3s, background 0.3s;
+}
+.wrapper .container .bottom .left .buy:hover {
+    background: #337AB7;
+}
+.wrapper .container .bottom .left .buy:hover i {
+    transform: translateY(5px);
+    color: #337AB7;
+}
+
+.buy-i {
+    height: 95px;
+    width: 80px;
+    background: url("./../images/busket.png") no-repeat center center;
+}
+
+.wrapper .container .bottom .right {
+    width: 50%;
+    background: #337AB7;
+    color: white;
+    float: right;
+    height: 200%;
+    overflow: hidden;
+}
+.wrapper .container .bottom .right .details {
+    padding: 20px;
+    float: right;
+    width: calc(70% - 40px);
+    font-size: 11px;
+}
+
+.details-r-p {
+    font-size: 15px;
+    color: #000;
+}
+.wrapper .container .bottom .right .done {
+    width: calc(30% - 2px);
+    float: left;
+    transition: transform 0.3s;
+    border-right: solid thin rgba(255, 255, 255, 0.3);
+    height: 50%;
+}
+.wrapper .container .bottom .right .done i {
+    font-size: 20px;
+    padding: 30px;
+    color: black;
+    height: 110px;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.wrapper .container .bottom .right .remove {
+    width: calc(30% - 1px);
+    clear: both;
+    border-right: solid thin rgba(255, 255, 255, 0.3);
+    height: 110px;
+    background: #BC3B59;
+    transition: transform 0.5s, background 0.3s;
+}
+.wrapper .container .bottom .right .remove:hover {
+    background: #9B2847;
+}
+.wrapper .container .bottom .right .remove:hover i {
+    transform: translateY(5px);
+}
+.wrapper .container .bottom .right .remove i {
+    transition: transform 0.5s;
+    font-size: 25px;
+    padding: 30px;
+    color: white;
+}
+
+.remove-i {
+    background: url("./../images/x.png") no-repeat center 20px;
+    height: inherit;
+    font-size: 15px;
+}
+
+.material-icons {
+    display: flex;
+    justify-content: center;
+}
+.wrapper .container .bottom .right:hover .remove, .wrapper .container .bottom .right:hover .done {
+    transform: translateY(-100%);
+}
+.wrapper .inside {
+    z-index: 9;
+    background: #337AB7;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: -70px;
+    right: -70px;
+    border-radius: 0px 0px 200px 200px;
+    transition: all 0.3s, border-radius 2s, top 1s;
+    overflow: hidden;
+}
+.wrapper .inside .icon {
+    position: absolute;
+    right: 100px;
+    top: 90px;
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+}
+.wrapper .inside:hover {
+    width: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    height: 80%;
+}
+.wrapper .inside:hover .icon {
+    opacity: 0;
+    right: 15px;
+    top: 15px;
+}
+.wrapper .inside:hover .contents {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(0);
+}
+.wrapper .inside .contents {
+    padding: 5%;
+    opacity: 0;
+    transform: scale(0.5);
+    transform: translateY(-200%);
+    transition: opacity 0.2s, transform 0.8s;
+}
+.wrapper .inside .contents table {
+    text-align: left;
+    width: 100%;
+}
+.wrapper .inside .contents h1, .wrapper .inside .contents p, .wrapper .inside .contents table {
+    color: white;
+}
+.wrapper .inside .contents p {
+    font-size: 13px;
+}
+
+
+/*Боковое меню*/
+
+* {
+    box-sizing: border-box;
+}
+
+.nav {
+    width: 320px;
+    min-width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    left: -320px;
+    padding: 15px 20px;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s;
+    background: #337AB7;
+    z-index: 2000;
+}
+
+.nav-toggle {
+    position: absolute;
+    left: 320px;
+    top: 1em;
+    padding: 0.5em;
+    background: inherit;
+    color: #dadada;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    z-index: 2001;
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    transition: color .25s ease-in-out;
+}
+
+.nav-toggle:after {
+    content: '\2630';
+    text-decoration: none;
+}
+
+.nav-toggle:hover {
+    color: #f4f4f4;
+}
+
+[id='nav-toggle'] {
+    position: absolute;
+    display: none;
+}
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+    left: auto;
+    right: 2px;
+    top: 1em;
+}
+
+[id='nav-toggle']:checked ~ .nav {
+    left: 0;
+    box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    overflow-y: auto;
+}
+
+[id='nav-toggle']:checked ~ main > article {
+    -webkit-transform: translateX(320px);
+    -moz-transform: translateX(320px);
+    transform: translateX(320px);
+}
+
+[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
+    content: '\2715';
+}
+
+body {
+    -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+    to {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    html,
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html,
+    body {
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .nav {
+        width: 100%;
+        box-shadow: none
+    }
+}
+
+.nav h2 {
+    width: 90%;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+    text-shadow: rgba(255, 255, 255, .1) -1px -1px 1px, rgba(0, 0, 0, .5) 1px 1px 1px;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    opacity: 0;
+    transform: scale(0.1, 0.1);
+    -ms-transform: scale(0.1, 0.1);
+    -moz-transform: scale(0.1, 0.1);
+    -webkit-transform: scale(0.1, 0.1);
+    transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%;
+    transition: opacity 0.8s, transform 0.8s;
+    -ms-transition: opacity 0.8s, -ms-transform 0.8s;
+    -moz-transition: opacity 0.8s, -moz-transform 0.8s;
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+}
+
+.nav h2 a {
+    color: #dadada;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+[id='nav-toggle']:checked ~ .nav h2 {
+    opacity: 1;
+    transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+}
+
+.nav > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav > ul > li {
+    line-height: 2.5;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
+    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
+    transition: opacity .5s .1s, transform .5s .1s;
+}
+
+[id='nav-toggle']:checked ~ .nav > ul > li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.nav > ul > li:nth-child(2) {
+    -webkit-transition: opacity .5s .2s, -webkit-transform .5s .2s;
+    transition: opacity .5s .2s, transform .5s .2s;
+}
+
+.nav > ul > li:nth-child(3) {
+    -webkit-transition: opacity .5s .3s, -webkit-transform .5s .3s;
+    transition: opacity .5s .3s, transform .5s .3s;
+}
+
+.nav > ul > li:nth-child(4) {
+    -webkit-transition: opacity .5s .4s, -webkit-transform .5s .4s;
+    transition: opacity .5s .4s, transform .5s .4s;
+}
+
+.nav > ul > li:nth-child(5) {
+    -webkit-transition: opacity .5s .5s, -webkit-transform .5s .5s;
+    transition: opacity .5s .5s, transform .5s .5s;
+}
+
+.nav > ul > li:nth-child(6) {
+    -webkit-transition: opacity .5s .6s, -webkit-transform .5s .6s;
+    transition: opacity .5s .6s, transform .5s .6s;
+}
+
+.nav > ul > li:nth-child(7) {
+    -webkit-transition: opacity .5s .7s, -webkit-transform .5s .7s;
+    transition: opacity .5s .7s, transform .5s .7s;
+}
+
+.nav > ul > li > a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #dadada;
+    width: 100%;
+    text-decoration: none;
+    /* плавный переход */
+    -webkit-transition: color .5s ease, padding .5s ease;
+    -moz-transition: color .5s ease, padding .5s ease;
+    transition: color .5s ease, padding .5s ease;
+}
+
+.main {
+    margin-left: 15px;
+}
+
+.nav > ul > li > a:hover,
+.nav > ul > li > a:focus {
+    color: white;
+    padding-left: 15px;
+}
+
+.nav > ul > li > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+.nav > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background: #4f9adb;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.nav > ul > li > a:hover:before {
+    width: 0%;
+    background: #7aacd8;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.nav > ul > li > a:hover:after {
+    width: 0%;
+    background: transparent;
+    -webkit-transition: width 0s ease;
+    transition: width 0s ease;
+}
+
+
+/*Cкроллбар*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #337AB7;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #afafaf;
+    border-radius: 20px;
+}

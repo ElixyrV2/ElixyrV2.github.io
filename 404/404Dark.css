@@ -1,6 +1,4 @@
 body {
-    max-width: 100%;
-    height: 100vh;
     background-color: #262626;
     color: #f4f4f4;
     display: grid;
@@ -529,15 +527,14 @@ body .footer .content > div .image {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 250px;
-    height: 50%;
+    height: 100%;
     cursor: pointer;
     margin: 0;
 }
 
 #score {
     position: absolute;
-    top: 90px;
+    top: 20px;
     right: 30px;
     font-size: 2em;
     font-weight: 900;
@@ -582,7 +579,7 @@ body .footer .content > div .image {
 }
 
 .content404 {
-    height: 800px;
+    height: 600px;
     width: 100%;
     text-align: center;
     position: inherit;
@@ -590,30 +587,50 @@ body .footer .content > div .image {
     left: 0;
 }
 
+.content404-1 {
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    position: inherit;
+    bottom: 10%;
+    left: 0;
+    background-color: #262626;
+}
+
 .ops {
-    font-size: 100px !important;
+    font-size: 80px !important;
     font-weight: bold;
 }
 
 .number {
-    font-size: 50px !important;
+    font-size: 40px !important;
 }
 
 .text-404 {
     position: relative;
-    top: 240px;
+    top: 140px;
     left: 100px;
     font-weight: bold;
     margin: 10px;
-    font-size: 20px;
+    font-size: 17px;
     color: #ababab;
 }
 
+.text-404-end {
+    top: 80px !important;
+}
+
 .img-404 {
-    position: relative;
-    margin-top: -130px;
-    margin-left: 900px;
-    display: inline-block;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img-404 > img {
+    height: 400px;
+    width: 600px;
 }
 
 .content-a {

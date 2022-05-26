@@ -2,29 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ошибка 404</title>
-    <link rel="stylesheet" href="404.css" id="theme-link">
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="personalСabinet.css" id="theme-link">
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
-
 <ul class="main-menu">
-    <li class="active"><a href="./../index.html">Главная</a></li>
+    <li class="active"><a href="index.html">Главная</a></li>
     <li class="menu-vidvigi" id="sborki">
         <a href="#">Готовые сборки</a>
         <ul>
             <li class="menu-vidvigi"><a href="#">На базе RTX</a>
                 <ul>
-                    <li><a href="./../Sborki/Sborka 30 series.html">На базе RTX 30 series</a></li>
-                    <li><a href="./../Sborki/Sborka 20 series.html">На базе RTX 20 series</a></li>
+                    <li><a href="Sborki/Sborka 30 series.html">На базе RTX 30 series</a></li>
+                    <li><a href="Sborki/Sborka 20 series.html">На базе RTX 20 series</a></li>
                 </ul>
             </li>
             <li class="menu-vidvigi"><a href="#">На базе GTX</a>
                 <ul>
-                    <li><a href="./../Sborki/Sborka 16 series.html">На базе GTX 16 series</a></li>
-                    <li><a href="./../Sborki/Sborka 10 series.html">На базе GTX 10 series</a></li>
+                    <li><a href="Sborki/Sborka 16 series.html">На базе GTX 16 series</a></li>
+                    <li><a href="Sborki/Sborka 10 series.html">На базе GTX 10 series</a></li>
                 </ul>
             </li>
-            <li><a href="./../Sborki/Sborka AMD series.html">На базе AMD</a></li>
+            <li><a href="Sborki/Sborka AMD series.html">На базе AMD</a></li>
         </ul>
     </li>
     <li class="menu-vidvigi" id="compl"><a href="#">Комплектующие</a>
@@ -33,24 +34,26 @@
                 <ul>
                     <li class="menu-vidvigi"><a href="#">Nvidia</a>
                         <ul>
-                            <li><a href="./../Videocards/RTX 30 series.html">RTX 30 series</a></li>
-                            <li><a href="./../Videocards/RTX 20 series.html">RTX 20 series</a></li>
+                            <li><a href="./Videocards/RTX 30 series.html">RTX 30 series</a></li>
+                            <li><a href="Videocards/RTX 20 series.html">RTX 20 series</a></li>
                         </ul>
                     </li>
-                    <li><a href="./../Videocards/AMD.html">AMD</a></li>
+                    <li><a href="Videocards/AMD.html">AMD</a></li>
                 </ul>
             </li>
             <li class="menu-vidvigi"><a href="#">Центральные Процессоры</a>
                 <ul>
-                    <li><a href="./../CPU/Intel.html">Intel</a></li>
-                    <li><a href="./../CPU/AMD Proc.html">AMD</a></li>
+                    <li><a href="CPU/Intel.html">Intel</a></li>
+                    <li><a href="CPU/AMD Proc.html">AMD</a></li>
                 </ul>
             </li>
         </ul>
     </li>
 
-    <li class="cabinet"><a href="#">Личный Кабинет</a></li>
+    <li class="cabinet" onclick="openForm()"><a href="#">Личный Кабинет</a></li>
 
+    <div class="form-popup" id="myForm">
+    </div>
 </ul>
 
 
@@ -87,36 +90,16 @@
 
         <li class="theme-button" id="theme-button">
             <a href="#">Сменить тему
-                <img class="img1" src="./../images/moon.png" height="20px" width="20px">
+                <img class="img1" src="images/moon.png" height="20px" width="20px">
             </a>
         </li>
     </ul>
 </nav>
 
-<div class="content-404">
-    <div class="content404">
-        <p class="text-404 ops" align="left">Ой...</p>
-        <p class="text-404" align="left">Извините, но видимо данная страница не найдена</p>
-        <p class="text-404 number" align="left">Код ошибки: 404</p>
-        <p class="text-404" align="left">Вы можете перейти на <a href="./../index.html" class="content-a">главную страницу</a>, либо же сыграть в игру (прокрутите вниз)</p>
-        <div class="img-404"><img src="404.png" alt=""></div>
-        <br>
-    </div>
-</div>
-
-<div class="container">
-    <div id="score"></div>
-    <canvas id="game" width="375" height="375"></canvas>
-    <div id="introduction">Удерживайте нажатой кнопку мыши, чтобы вытянуть палку</div>
-    <div id="perfect">ДВОЙНОЙ СЧЕТ</div>
-    <button id="restart">РЕСТАРТ</button>
-</div>
 
 
-<div class="content404-1">
-    <p class="text-404 text-404-end" align="left">Понравилось? Можете поделится своим рекордом <a href="">здесь</a></p>
-</div>
-
+<script src="personalCabinet.js"></script>
+</body>
 
 <footer>
     <div class="footer">
@@ -273,7 +256,4 @@
     </svg>
 </footer>
 
-
-<script src="404Theme.js"></script>
-</body>
 </html>

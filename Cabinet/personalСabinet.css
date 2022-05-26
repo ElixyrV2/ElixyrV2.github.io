@@ -1,4 +1,6 @@
 body {
+    max-width: 100%;
+    height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-areas: "main" "footer";
@@ -11,7 +13,6 @@ body {
     list-style: none;
     font-family: 'Montserrat', sans-serif; /*шрифт менюшки*/
     margin: 30px 0 0;
-    padding-bottom: 10px;
 }
 
 .main-menu > li {
@@ -143,11 +144,9 @@ body {
 
 .cabinet {
     position: absolute; /* Перенес личный кабинет в право, остальные блоки не реагируют */
-    right: 50px; /* Расположение блока */
+    right: 40px; /* Расположение блока */
+    top: 30px;
 }
-
-
-/*Боковое меню*/
 
 * {
     box-sizing: border-box;
@@ -415,18 +414,31 @@ body {
 }
 
 
-/* Футер */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #337AB7;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #afafaf;
+    border-radius: 20px;
+}
 
-.footer {
+
+/* футер */
+
+/* footer */
+
+body .footer {
     z-index: 1;
     --footer-background: #337AB7;
     display: grid;
     position: relative;
-    margin-top: -10px;
     grid-area: footer;
     min-height: 12rem;
 }
-
 body .footer .bubbles {
     position: absolute;
     top: 0;
@@ -436,7 +448,6 @@ body .footer .bubbles {
     background: #337AB7;
     filter: url("#blob");
 }
-
 body .footer .bubbles .bubble {
     position: absolute;
     left: var(--position, 50%);
@@ -445,7 +456,6 @@ body .footer .bubbles .bubble {
     animation: bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s), bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
     transform: translate(-50%, 100%);
 }
-
 body .footer .content {
     z-index: 2;
     display: grid;
@@ -501,164 +511,5 @@ body .footer .content > div .image {
     }
     100% {
         bottom: var(--distance, 10rem);
-    }
-}
-
-
-/* Скроллбар */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-thumb {
-    background: #337AB7;
-    border-radius: 20px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #afafaf;
-    border-radius: 20px;
-}
-
-
-/* Игра */
-
-.container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    cursor: pointer;
-    margin: 0;
-}
-
-#score {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 2em;
-    font-weight: 900;
-}
-
-#introduction {
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    font-weight: 600;
-    font-size: 0.8em;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    transition: opacity 2s;
-}
-
-#restart {
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    border-radius: 50%;
-    color: white;
-    background-color: red;
-    border: none;
-    font-weight: 700;
-    font-size: 1.2em;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    display: none;
-    cursor: pointer;
-}
-
-#perfect {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 2s;
-}
-
-/* 404 */
-
-.content-404 {
-    background:url('/404.png') center no-repeat #262626;
-}
-
-.content404 {
-    height: 600px;
-    width: 100%;
-    text-align: center;
-    position: inherit;
-    bottom: 10%;
-    left: 0;
-}
-
-.content404-1 {
-    height: 300px;
-    width: 100%;
-    text-align: center;
-    position: inherit;
-    bottom: 10%;
-    left: 0;
-    background-color: #262626;
-}
-
-.ops {
-    font-size: 80px !important;
-    font-weight: bold;
-}
-
-.number {
-    font-size: 40px !important;
-}
-
-.text-404 {
-    position: relative;
-    top: 140px;
-    left: 100px;
-    font-weight: bold;
-    margin: 10px;
-    font-size: 17px;
-    color: #ababab;
-}
-
-.text-404-end {
-    top: 80px !important;
-}
-
-.img-404 {
-    margin-top: -150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.img-404 > img {
-    height: 400px;
-    width: 600px;
-}
-
-.content-a {
-    display: inline-block;
-    text-decoration: none
-}
-
-.content-a, .content-a:hover {
-    color: rgba(255,255,255,0.3);
-}
-
-.content-a:hover {
-    color: rgba(255,255,255,0.5);
-}
-
-@media only screen and (max-width: 460px), screen and (max-height: 700px) {
-    .content {
-        position:static;
-    }
-
-    .content-a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 0;
-        opacity: 0;
     }
 }

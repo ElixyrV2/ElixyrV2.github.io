@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика Конфиденциальности</title>
+    <link rel="stylesheet" href="Политика.css" id="theme-link">
+</head>
+<body>
+    <ul class="main-menu">
+        <li class="active"><a href="./../index.html">Главная</a></li>
+        <li class="menu-vidvigi" id="sborki">
+            <a href="#url">Готовые сборки</a>
+            <ul>
+                <li class="menu-vidvigi"><a href="#url">На базе RTX</a>
+                    <ul>
+                        <li><a href="./../Sborki/Sborka 30 series.html">На базе RTX 30 series</a></li>
+                        <li><a href="./../Sborki/Sborka 20 series.html">На базе RTX 20 series</a></li>           
+                    </ul>
+                </li>
+                <li class="menu-vidvigi"><a href="#url">На базе GTX</a>
+                    <ul>
+                        <li><a href="./../Sborki/Sborka 16 series.html">На базе GTX 16 series</a></li>
+                        <li><a href="./../Sborki/Sborka 10 series.html">На базе GTX 10 series</a></li>           
+                    </ul>
+                </li>
+                <li><a href="./../Sborki/Sborka AMD series.html">На базе AMD</a></li>           
+            </ul>
+        </li>
+        <li class="menu-vidvigi" id="compl"><a href="#url">Комплектующие</a>
+            <ul>
+                <li class="menu-vidvigi"><a href="#url">Видеокарты</a>
+                    <ul>
+                        <li class="menu-vidvigi"><a href="#url">Nvidia</a>
+                            <ul>
+                                <li><a href="./../Videocards/RTX 30 series.html">RTX 30 series</a></li>
+							    <li><a href="./../Videocards/RTX 20 series.html">RTX 20 series</a></li>  	         
+                            </ul>
+                        </li>   
+                        <li><a href="./../Videocards/AMD.html">AMD</a></li>   
+                    </ul>
+                </li>
+                <li class="menu-vidvigi"><a href="#url">Центральные Процессоры</a>
+                    <ul>
+                        <li><a href="./../CPU/Intel.html">Intel</a></li>
+                        <li><a href="./../CPU/AMD Proc.html">AMD</a></li>
+                    </ul>  
+                </li>
+            </ul>
+        </li>
+        <li class="cabinet" onclick="openForm()"><a href="#">Личный Кабинет</a></li>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h2 class="form-h2">Войти</h2>
+
+                <label for="email"><b>Почта</b></label>
+                <input type="text" placeholder="Введите Почту" name="email" required>
+
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введите Пароль" name="psw" required>
+
+                <button type="submit" class="btn-submit">Войти</button>
+                <button type="submit" class="buttons btn-reg" id="show-modal" onclick="closeForm()">Регистрация</button>
+                <button type="submit" class="buttons btn-cancel" onclick="closeForm()">Закрыть</button>
+            </form>
+        </div>
+    </ul>
+    <hr>
+
+
+    <input type="checkbox" id="nav-toggle" hidden>
+    <nav class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <h2 class="logo">
+            <a href="#url">Bagashop.com</a>
+        </h2>
+        <ul>
+            <li>
+                <a href="./Politic/Политика.html">Политика
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-columns-reverse" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z"/>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="PC">
+                <a href="./Mobile/Mobile.html">Мобильная версия
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16">
+                        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"/>
+                    </svg>
+                </a>
+            </li>
+
+            <li>
+                <a href="./Other/AboutUs/index.html">О компании
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16">
+                        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"/>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="theme-button" id="theme-button">
+                <a href="#">Сменить тему
+                    <img class="img1" src="images/moon.png" height="20px" width="20px">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <h2 class="zagl"><strong>Политика конфиденциальности онлайн магазина bagashop.com</strong></h2>
+    <h4 class="text">Оставляя данные на сайте, Вы соглашаетесь с Политикой конфиденциальности и защиты информации.</h4>
+    <ol>
+        <h3 class="container"><li>Защита данных</li></h3>
+        <h4 class="container">Администрация сайта Baga shop (далее Сайт) не может передать или раскрыть информацию, предоставленную пользователем (далее Пользователь) при регистрации и использовании функций сайта третьим лицам, кроме случаев, описанных законодательством страны, на территории которой пользователь ведет свою деятельность. <br><br></h4>
+        
+        <h3 class="container"><li>Получение персональной информации</li></h3>
+        <h4 class="container">Для коммуникации на сайте пользователь обязан внести некоторую персональную информацию. Для проверки предоставленных данных, сайт оставляет за собой право потребовать доказательства идентичности в онлайн или офлайн режимах. <br><br></h4>
+        
+        <h3 class="container"><li>Использование персональной информации</li></h3>
+        <h4 class="container">Сайт использует личную информацию Пользователя для обслуживания и для улучшения качества предоставляемых услуг. Часть персональной информации может быть предоставлена банку или платежной системе, в случае, если предоставление этой информации обусловлено процедурой перевода средств платежной системе, услугами которой Пользователь желает воспользоваться. Сайт прилагает все усилия для сбережения в сохранности личных данных Пользователя. Личная информация может быть раскрыта в случаях, описанных законодательством, либо когда администрация сочтет подобные действия необходимыми для соблюдения юридической процедуры, судебного распоряжения или легального процесса необходимого для работы Пользователя с Сайтом. В других случаях, ни при каких условиях, информация, которую Пользователь передает Сайту, не будет раскрыта третьим лицам. <br><br></h4>
+        
+        <h3 class="container"><li>Коммуникация</li></h3>
+        <h4 class="container">После того, как Пользователь оставил данные, он получает сообщение, подтверждающее его успешную регистрацию. Пользователь имеет право в любой момент прекратить получение информационных бюллетеней воспользовавшись соответствующим сервисом в <br><br></h4>
+        
+        <h3 class="container"><li>Ссылки</li></h3>
+        <h4 class="container">На сайте могут содержаться ссылки на другие сайты. Сайт не несет ответственности за содержание, качество и политику безопасности этих сайтов. Данное заявление о конфиденциальности относится только к информации, размещенной непосредственно на сайте. <br><br></h4>
+        
+        <h3 class="container"><li>Безопасность</li></h3>
+        <h4 class="container">Сайт обеспечивает безопасность учетной записи Пользователя от несанкционированного доступа. <br><br></h4>
+        
+        <h3 class="container"><li>Уведомления об изменениях</li></h3>
+        <h4 class="container">Сайт оставляет за собой право вносить изменения в Политику конфиденциальности без дополнительных уведомлений. Нововведения вступают в силу с момента их опубликования. Пользователи могут отслеживать изменения в Политике конфиденциальности самостоятельно. <br></h4>
+    </ol>
+    <hr>
+    <h5 class="konec"> <em>Желаем вам приятного пользования сайтом bagashop.com</em></h5>
+    <h6 class="konec1"><em>С уважением, администрация сайта bagashop.com </em></h6>
+    <a class="back">↑</a>
+
+	<script src="Политика.js"></script>
+</body>
+</html>
